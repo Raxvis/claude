@@ -23,7 +23,6 @@
 |----------|--------|--------|-----------|
 | App Icons & Branding | | | |
 | Visual Assets | | | |
-| Store Listing Assets | | | |
 | **Total** | | | |
 
 ---
@@ -61,38 +60,6 @@ Sprites, illustrations, backgrounds, and other in-[DOMAIN_ENTITY] visual content
 | Color depth | [e.g., 32-bit RGBA] |
 | Format | [e.g., PNG with transparency] |
 | Naming convention | [e.g., `category_name_variant.ext`] |
-
----
-
-## Store Listing Assets
-
-Assets required for publishing to app stores or distribution platforms.
-
-### [PLATFORM] (e.g., iOS App Store)
-
-| Asset | Size | Exists | Notes |
-|-------|------|--------|-------|
-| App Icon | [SIZE] | | |
-| Screenshot — [Screen Name] | [SIZE] | | |
-| Screenshot — [Screen Name] | [SIZE] | | |
-| Preview Video | [SPEC] | | |
-| Feature Graphic | [SIZE] | | |
-
-### [PLATFORM] (e.g., Android / Google Play)
-
-| Asset | Size | Exists | Notes |
-|-------|------|--------|-------|
-| App Icon | [SIZE] | | |
-| Screenshot — [Screen Name] | [SIZE] | | |
-| Screenshot — [Screen Name] | [SIZE] | | |
-| Feature Graphic | [SIZE] | | |
-
-### [PLATFORM] (e.g., Web)
-
-| Asset | Size | Exists | Notes |
-|-------|------|--------|-------|
-| Open Graph Image | [SIZE] | | |
-| Favicon | [SIZE] | | |
 
 ---
 
