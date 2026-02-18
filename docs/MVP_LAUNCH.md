@@ -1,10 +1,10 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: MVP_LAUNCH.md
-  Purpose: Launch readiness audit template. Use this document to assess whether the project
+  FILE: MVP_LAUNCH.md
+  PURPOSE: Launch readiness audit template. Use this document to assess whether the project
            is ready for release by cataloguing bugs, verifying requirements alignment,
            and tracking launch blockers.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME] with your project name.
   - Replace [VERSION] with the target release version (e.g., "1.0.0").
   - Replace [AUDIT_DATE] with the date this audit was conducted.
@@ -127,14 +127,12 @@ Verify that all requirements from the product specification are implemented.
 |---|------|--------|-------|
 | 1 | All Critical bugs resolved | | |
 | 2 | All Critical launch blockers resolved | | |
-| 3 | App icon and splash screen finalized | | |
-| 4 | Store listing copy written and reviewed | | |
-| 5 | Store listing screenshots prepared | | |
-| 6 | Privacy policy published and linked | | |
-| 7 | [PLATFORM]-specific requirements met (e.g., age rating, permissions) | | |
-| 8 | Production build tested end-to-end | | |
-| 9 | Data persistence verified (save/load, offline) | | |
-| 10 | [Add project-specific blocking items] | | |
+| 3 | Production build tested end-to-end on all target platforms | | |
+| 4 | Data persistence verified (save/load cycle, migration) | | |
+| 5 | Distribution requirements met (platform-specific policies, if applicable) | | |
+| 6 | Release artifacts produced and verified (binaries, packages, images) | | |
+| 7 | Release notes / changelog updated | | |
+| 8 | [Add project-specific blocking items] | | |
 
 ### Important — Should Fix Before Launch
 

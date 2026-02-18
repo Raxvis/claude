@@ -1,10 +1,10 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: ARCH_DATA_SCHEMA.md
-  Purpose: Architecture specification for a data schema. Use this document to formally
+  FILE: ARCH_DATA_SCHEMA.md
+  PURPOSE: Architecture specification for a data schema. Use this document to formally
            define the structure, fields, validation rules, serialization format, and
            migration strategy for a significant data structure in the project.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME], [SCHEMA_NAME], [AUTHOR], [VERSION], [DATE] with actual values.
   - Replace [DOMAIN_ENTITY] with the domain object being modeled (e.g., "UserProfile", "Order").
   - Replace [FIELD_NAME], [TYPE], [REQUIRED/OPTIONAL], [DEFAULT], [DESCRIPTION] in the

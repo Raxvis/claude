@@ -61,8 +61,20 @@ Avoid implementation detail — that belongs in PRD.md or ADDITIONAL.md.]
 
 ---
 
+## Getting Started
+
+Your first concept entry should describe the overall project vision: what the product is,
+who it's for, and what makes it compelling. Subsequent entries can cover supporting concepts
+such as the core user workflow, key design pillars, or differentiating principles.
+
+---
+
 ## Concepts
 
 _Add new concept entries below using the template above. Remove this placeholder line when the first entry is added._
 
 _(empty)_
+
+---
+
+_Last updated: [YYYY-MM-DD]_

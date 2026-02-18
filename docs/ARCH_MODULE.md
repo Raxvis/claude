@@ -1,11 +1,11 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: ARCH_MODULE.md
-  Purpose: Architecture specification for a single, self-contained module. Use this document
+  FILE: ARCH_MODULE.md
+  PURPOSE: Architecture specification for a single, self-contained module. Use this document
            to define the data model, public API, integration points, and testing strategy
            for one logical unit of the system (e.g., a data layer, a calculation engine,
            a service, or a manager).
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME], [MODULE_NAME], [AUTHOR], [VERSION], [DATE] with actual values.
   - Replace [DOMAIN_ENTITY], [RESOURCE_TYPE], [PROGRESSION_UNIT], [CORE_MECHANIC] with
     domain-specific terms appropriate to your project.

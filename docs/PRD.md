@@ -21,7 +21,7 @@
 # [PROJECT_NAME] — Product Requirements Document
 
 **Version:** [VERSION]
-**Status:** [Draft | In Review | Approved]
+**Status:** Draft / In Review / Approved
 
 ---
 

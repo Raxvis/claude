@@ -1,10 +1,10 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: MILESTONE_VALIDATION.md
-  Purpose: Milestone validation report template. Use this document to formally verify that
+  FILE: MILESTONE_VALIDATION.md
+  PURPOSE: Milestone validation report template. Use this document to formally verify that
            a milestone's requirements have been met before marking it complete and moving
            to the next phase of development.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME] with your project name.
   - Replace [MILESTONE_NAME] with the specific milestone being validated (e.g., "M2: Core Loop").
   - Replace [VALIDATOR] with the name or role of the person conducting the validation.

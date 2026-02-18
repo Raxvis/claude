@@ -60,6 +60,8 @@ docs/
     [COMPONENT_NAME]_COMPONENT.md # Per-component UI specification
 ```
 
+> **Note:** Subdirectories (`milestones/`, `architecture/`, `ui-specs/`) are created when the first document of that type is needed. They do not exist in the base template.
+
 ---
 
 ## File Naming and Placement Rules
@@ -190,19 +192,6 @@ Records acceptance of a scope (milestone, feature, or release) against stated cr
 - When asked to specify a screen or component, create the file at `docs/ui-specs/`.
 - Use the `docs/UI_SPEC.md` template.
 - Register the new file in `docs/README.md`.
-
----
-
-### Task Breakdowns
-
-**Location:** `docs/milestones/`
-
-**Naming:** `[MILESTONE_NAME]_TASKS.md`
-
-**Agent responsibilities:**
-- When beginning milestone planning, create or update this file.
-- Each task must have a clear, binary acceptance criterion.
-- Do not create task files at the repository root or in other `docs/` subdirectories.
 
 ---
 

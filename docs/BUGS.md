@@ -1,9 +1,9 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: BUGS.md
-  Purpose: Central bug tracking log for the project. Use this file to record all known bugs,
+  FILE: BUGS.md
+  PURPOSE: Central bug tracking log for the project. Use this file to record all known bugs,
            their status, severity, reproduction steps, and resolution details.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME] with your project name throughout.
   - Replace [PLATFORM_LIST] with the platforms your project targets (e.g., "iOS, Android, Web").
   - Add bug entries as they are discovered using the BUG-XXX format.
@@ -21,7 +21,7 @@
 
 ```
 ### BUG-XXX: [Short Title]
-- **Status**: Open | In Progress | Fixed | Won't Fix | Deferred
+- **Status**: Open / In Progress / Fixed / Won't Fix / Deferred
 - **Severity**: Critical | High | Medium | Low
 - **Description**: [Detailed description of the bug and its impact on the user experience.]
 - **Expected**: [What should happen.]

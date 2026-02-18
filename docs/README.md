@@ -27,7 +27,7 @@ These documents describe what the project is, why it exists, and how it is desig
 |------|-------------|
 | `CONCEPT.md` | High-level project vision, core loop, and design pillars. Start here for a first-principles understanding of the project. |
 | `PRD.md` | Product Requirements Document. Defines features, user stories, acceptance criteria, success metrics, and constraints. |
-| `ADDITIONAL.md` | Extended design details that expand on the PRD without cluttering it. Covers advanced systems, pacing, monetization specifics, and post-launch plans. |
+| `ADDITIONAL.md` | Extended design details that expand on the PRD. Covers systems, rules, and specifications too detailed for the PRD itself. |
 | `GLOSSARY.md` | Canonical definitions for all domain-specific terms used across documents. Resolve any naming ambiguities here. |
 | `DESIGN_RATIONALE.md` | Decision log recording significant design choices, the reasoning behind them, and the trade-offs accepted. |
 
@@ -53,11 +53,11 @@ These documents track the live state of the project: bugs, progress, and milesto
 | File | Description |
 |------|-------------|
 | `BUGS.md` | Active bug tracker. Documents known issues, reproduction steps, and resolution status. |
-| `CHANGELOG.md` | Chronological log of notable changes across releases and milestones. |
+| `CHANGELOG.md` | Chronological log of notable changes across releases and milestones. Maintained by the release agent. |
 | `ASSETS.md` | Registry of all project assets (images, fonts, etc.) with status and source information. |
 | `MVP_LAUNCH.md` | Checklist and criteria for the initial public release. |
 | `STANDUP.md` | Running log of progress updates, blockers, and decisions from work sessions. |
-| `MILESTONE_VALIDATION.md` | Acceptance records confirming each milestone has met its stated criteria. |
+| `MILESTONE_VALIDATION.md` | Template for milestone acceptance records. Copy to `docs/milestones/` for each milestone. |
 
 ---
 
@@ -72,7 +72,8 @@ systems, data schemas, UI screens, or task breakdowns.
 | `ARCH_SYSTEM.md` | Template for documenting a high-level system composed of multiple modules. |
 | `ARCH_DATA_SCHEMA.md` | Template for documenting a data schema or save format. |
 | `UI_SPEC.md` | Template for specifying a UI screen or component (layout, states, interactions, accessibility). |
-| `MILESTONE_TASKS.md` | Template for breaking a milestone into concrete, actionable tasks with acceptance criteria. |
+| `MILESTONE_TASKS.md` | Template for breaking a milestone into concrete, actionable tasks with acceptance criteria. Copy to `docs/milestones/` for each milestone. |
+| `MILESTONE_COMPLETION.md` | Template for milestone completion reports. Copy to `docs/milestones/` after a milestone is validated. |
 
 ---
 

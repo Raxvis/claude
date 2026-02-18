@@ -178,7 +178,7 @@ All files in the template system are listed below with a short description of ea
 | `agents/validator.md` | Defines the validator agent; enforces agent protocols, resolves conflicts, tracks milestones, runs retrospectives |
 | `agents/bug-gatherer.md` | Defines the bug gatherer agent; collects and structures bug reports for Product triage and Coder resolution |
 
-### docs/ (21 files)
+### docs/ (22 files)
 
 | File | Description |
 |---|---|
@@ -193,12 +193,13 @@ All files in the template system are listed below with a short description of ea
 | `docs/ERROR_HANDLING.md` | Guidelines for handling errors across all categories; defines principles, patterns, and user-facing message standards |
 | `docs/TEST_FRAMEWORK.md` | Testing strategy, test runner setup, file conventions, and coverage requirements |
 | `docs/BUGS.md` | Active bug tracker; documents known issues, reproduction steps, and resolution status |
-| `docs/CHANGELOG.md` | Running log of notable changes per release version, maintained by the release agent |
+| `docs/CHANGELOG.md` | Chronological log of notable changes across releases and milestones, maintained by the release agent |
 | `docs/ASSETS.md` | Registry of all project assets (images, fonts, etc.) with status and source information |
 | `docs/MVP_LAUNCH.md` | Checklist and criteria for the initial public release |
 | `docs/STANDUP.md` | Running log of progress updates, blockers, and decisions from work sessions |
 | `docs/MILESTONE_VALIDATION.md` | Acceptance records confirming each milestone has met its stated criteria |
 | `docs/MILESTONE_TASKS.md` | Template for breaking a milestone into concrete, actionable tasks with acceptance criteria |
+| `docs/MILESTONE_COMPLETION.md` | Template for milestone completion reports summarizing delivered items, deferrals, and lessons learned |
 | `docs/ARCH_MODULE.md` | Template for documenting a single code module (purpose, interface, dependencies, error handling) |
 | `docs/ARCH_SYSTEM.md` | Template for documenting a high-level system composed of multiple modules |
 | `docs/ARCH_DATA_SCHEMA.md` | Template for documenting a data schema or save format |

@@ -1,10 +1,10 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: ARCH_SYSTEM.md
-  Purpose: Architecture specification for a multi-module system. Use this document when
+  FILE: ARCH_SYSTEM.md
+  PURPOSE: Architecture specification for a multi-module system. Use this document when
            a feature or capability spans several modules that must work together — for
            example, a complete loop involving data, state, and UI layers.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME], [SYSTEM_NAME], [AUTHOR], [VERSION], [DATE] with actual values.
   - Replace [MODULE_A], [MODULE_B], etc. with the actual module names in your system.
   - Replace [DOMAIN_ENTITY], [RESOURCE_TYPE], [CORE_MECHANIC], [STATE_LIBRARY],

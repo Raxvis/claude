@@ -2,9 +2,8 @@
   FILE: ADDITIONAL.md
   PURPOSE: This document contains extended design detail that is true to the project's
   vision but too granular or voluminous to live comfortably in PRD.md. It covers advanced
-  systems, the nuances of individual mechanics, detailed pacing targets, monetization
-  specifics, and post-launch plans. The PRD says "what must be true"; this document says
-  "here is exactly how it works in detail".
+  systems, detailed specifications, integration details, and post-launch plans. The PRD
+  says "what must be true"; this document says "here is exactly how it works in detail".
 
   HOW TO CUSTOMIZE:
   - Use the Additional Item Template below to add new entries.
@@ -61,8 +60,27 @@ information that defines how this system works. Use tables, code blocks, or list
 
 ---
 
+## Common Entry Types
+
+Typical entries in this document include:
+
+- **Advanced design patterns** — Detailed rules or algorithms too granular for the PRD.
+- **Coding rules** — Project-specific coding constraints beyond what CODE_PATTERNS.md covers.
+- **Integration specifications** — Details on third-party service integrations or API contracts.
+- **Post-launch plans** — Detailed plans for features deferred beyond MVP.
+- **Domain-specific formulas** — Calculations, scaling curves, or business rules.
+
+If an entry does not expand on something in the PRD or CONCEPT.md, consider whether it
+belongs in a different document (e.g., CODE_PATTERNS.md, ERROR_HANDLING.md).
+
+---
+
 ## Items
 
 _Add new extended design details below using the template above. Remove this placeholder line when the first item is added._
 
 _(empty)_
+
+---
+
+_Last updated: [YYYY-MM-DD]_

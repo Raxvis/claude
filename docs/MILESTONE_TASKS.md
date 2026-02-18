@@ -1,10 +1,10 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: MILESTONE_TASKS.md
-  Purpose: Task breakdown for a single milestone. Use this document to list all tasks
+  FILE: MILESTONE_TASKS.md
+  PURPOSE: Task breakdown for a single milestone. Use this document to list all tasks
            required to complete a milestone, track their status, define acceptance criteria,
            and reference supporting architecture and UI specification documents.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME] with your project name.
   - Replace [MILESTONE_NAME] with the milestone title (e.g., "M2: Core Loop").
   - Replace [REQUIREMENTS_REFERENCE] with a link or section reference to the relevant

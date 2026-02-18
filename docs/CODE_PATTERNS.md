@@ -262,3 +262,7 @@ breakdown, use the corresponding template from `docs/`:
 
 Copy the template to the correct location per `FILE_CONVENTIONS.md` before filling it in.
 Do not create architecture or specification documents from scratch.
+
+---
+
+_Last updated: [YYYY-MM-DD]_

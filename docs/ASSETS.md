@@ -1,9 +1,9 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: ASSETS.md
-  Purpose: Central inventory of all assets required by the project. Tracks what is needed,
+  FILE: ASSETS.md
+  PURPOSE: Central inventory of all assets required by the project. Tracks what is needed,
            what exists, what is a placeholder, and what still needs to be created.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME] with your project name.
   - Replace [ASSET_CATEGORY] with your asset categories (e.g., "Character Sprites", "UI Icons").
   - Replace [ASSET_NAME], [FORMAT], [SIZE], [NOTES] with specifics for each asset.
@@ -43,7 +43,7 @@ Specifications for icons and brand assets required for submission and display.
 
 ## Visual Assets
 
-Sprites, illustrations, backgrounds, and other in-[DOMAIN_ENTITY] visual content.
+Sprites, illustrations, backgrounds, and other [DOMAIN_ENTITY]-related visual content.
 
 | Asset Name | Category | Format | Size | Exists | Notes |
 |------------|----------|--------|------|--------|-------|
@@ -79,7 +79,7 @@ Assets that exist in the project as placeholders and need to be replaced with fi
 Locations in the codebase where emoji, Unicode symbols, or placeholder glyphs are used in place of final visual assets.
 
 | Location | Current Placeholder | Final Asset | Priority |
-|----------|--------------------|-----------:|----------|
+|----------|--------------------|-----------| ----------|
 | `[path/to/file]` | [emoji or symbol] | [Asset description] | High / Medium / Low |
 | `[path/to/file]` | [emoji or symbol] | [Asset description] | High / Medium / Low |
 

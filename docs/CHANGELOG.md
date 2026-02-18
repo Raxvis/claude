@@ -1,9 +1,9 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: CHANGELOG.md
-  Purpose: Documentation change history for the project. Tracks what was added, changed,
-           removed, or fixed in project documentation (not necessarily the codebase itself).
+  FILE: CHANGELOG.md
+  PURPOSE: Chronological log of notable changes across releases and milestones. Tracks what
+           was added, changed, removed, or fixed in each version of the project.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME] with your project name.
   - Add entries in reverse-chronological order (newest at the top).
   - Use the format: `[YYYY-MM-DD] - Title` with sub-bullets for Added/Changed/Removed/Fixed.
@@ -11,7 +11,7 @@
   - Prioritize upcoming work as: High (needed now), Medium (needed soon), Low (nice to have).
 -->
 
-# [PROJECT_NAME] — Documentation Change History
+# [PROJECT_NAME] — Changelog
 
 ---
 
@@ -71,6 +71,18 @@ _Nice-to-have documentation improvements for the future._
 | Document | What's Needed | Owner |
 |----------|--------------|-------|
 | | | |
+
+---
+
+## Versioning Strategy
+
+This project uses [VERSIONING_SCHEME] (e.g., Semantic Versioning, Calendar Versioning).
+
+- **Major** version: [Describe when the major version increments, e.g., "Breaking changes to public API or data format."]
+- **Minor** version: [Describe when the minor version increments, e.g., "New features that are backward-compatible."]
+- **Patch** version: [Describe when the patch version increments, e.g., "Bug fixes and minor improvements."]
+
+The release agent is responsible for determining version numbers based on these rules.
 
 ---
 

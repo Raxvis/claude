@@ -111,3 +111,7 @@ When a decision is reversed, move the original entry here and add a new entry ab
 explaining the reversal. Do not delete original entries.
 
 *No reversed decisions yet.*
+
+---
+
+_Last updated: [YYYY-MM-DD]_

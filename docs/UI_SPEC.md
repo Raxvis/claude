@@ -1,10 +1,10 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: UI_SPEC.md
-  Purpose: UI specification for a single screen or component. Use this document to define
+  FILE: UI_SPEC.md
+  PURPOSE: UI specification for a single screen or component. Use this document to define
            the visual design, layout, states, animations, data requirements, and accessibility
            requirements for one discrete piece of the user interface.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME], [COMPONENT_OR_SCREEN_NAME], [AUTHOR], [VERSION], [DATE] with
     actual values.
   - Replace [TASK_REFERENCE] with a link or ID to the task or milestone this spec implements.
@@ -178,6 +178,29 @@
 | [e.g., Missing or null data] | [e.g., Show placeholder / skeleton] |
 | [e.g., Small screen size] | [e.g., Stack elements vertically] |
 | [e.g., Rapid successive taps] | [e.g., Debounce — ignore taps within 300ms of first] |
+
+---
+
+## Acceptance Checklist
+
+- [ ] Layout matches the diagram above
+- [ ] All states (default, pressed, disabled, loading, empty, error) implemented
+- [ ] Accessibility requirements met (labels, roles, contrast, touch targets)
+- [ ] Animations match spec (duration, easing, triggers)
+- [ ] Edge cases handled per the Edge Cases table
+- [ ] Component renders correctly on all target platforms
+- [ ] No linter or type-check errors introduced
+
+---
+
+## Product Approval
+
+| Field | Value |
+|-------|-------|
+| **Approved by** | [NAME or ROLE] |
+| **Date** | [YYYY-MM-DD] |
+| **Status** | Pending / Approved / Changes Requested |
+| **Notes** | [Any conditions or feedback.] |
 
 ---
 

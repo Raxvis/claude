@@ -27,12 +27,16 @@ a definition are themselves defined in this glossary.
 
 ## Core Concepts
 
+_Terms fundamental to understanding the product (e.g., the core user action, the primary data model)._
+
 **[TERM_NAME]**
 [Description of the term.]
 
 ---
 
 ## Domain-Specific Terms
+
+_Jargon or terminology specific to the project's industry or problem space._
 
 **[TERM_NAME]**
 [Description of the term.]
@@ -41,12 +45,16 @@ a definition are themselves defined in this glossary.
 
 ## Technical Terms
 
+_Terms related to the codebase, architecture, or infrastructure._
+
 **[TERM_NAME]**
 [Description of the term.]
 
 ---
 
 ## UI Terms
+
+_Names for screens, components, or interaction patterns used in the interface._
 
 **[TERM_NAME]**
 [Description of the term.]
@@ -64,3 +72,7 @@ a definition are themselves defined in this glossary.
 | [ABBR_5] | [FULL_TERM_5] |
 | MVP | Minimum Viable Product |
 | PRD | Product Requirements Document |
+
+---
+
+_Last updated: [YYYY-MM-DD]_

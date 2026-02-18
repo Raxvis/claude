@@ -37,12 +37,9 @@ PLACEHOLDER LEGEND:
   [BUILD_CMD]             — Command to produce a production build
   [PKG_MANAGER]           — Package/dependency manager (e.g. "npm", "pub", "bundler")
   [PKG_ADD_CMD]           — How to add a new dependency (e.g. "npm install", "flutter pub add")
-  [SAVE_KEY]              — Storage key for persisted save data (e.g. "my_app_save_v1")
+  [SAVE_KEY]              — Storage key for persisted data (e.g. "my_app_data_v1")
   [SAVE_VERSION]          — Current save format version number (e.g. "1")
   [BUNDLE_ID]             — Application bundle/package identifier
-  [TICK_INTERVAL_MS]      — Main loop tick interval in milliseconds (e.g. "500")
-  [OFFLINE_CAP_HOURS]     — Maximum offline progress hours to award (e.g. "8")
-  [COST_GROWTH_RATE]      — Exponential cost scaling growth rate (e.g. "1.10")
   [SCREEN_DIR]            — Directory where screen/page files live (e.g. "app/", "pages/")
   [LOGIC_DIR]             — Directory for pure business logic (e.g. "src/game/", "lib/domain/")
   [STORE_DIR]             — Directory for state management files (e.g. "src/store/")
@@ -72,17 +69,10 @@ After filling in the template, delete this entire comment block before committin
     settings.[EXT]                # Settings screen
   src/
     [LOGIC_DIR]                   # Pure [LANGUAGE] business logic (no UI framework)
-      [LARGE_NUMBER_MODULE].[EXT] # Large-number arithmetic + formatting
-      [ENTITY_DATA_MODULE].[EXT]  # Static entity definitions and calculations
-      [WORLD_DATA_MODULE].[EXT]   # World/level/slot data structures and mutations
-      economy.[EXT]               # Revenue tick calculations
-      save-manager.[EXT]          # [PERSISTENCE_LAYER] persistence, offline progress
     [STORE_DIR]
       [APP_STORE].[EXT]           # [STATE_LIBRARY] store: all app state and actions
     [COMPONENTS_DIR]              # UI components
-    [HOOKS_DIR]
-      use[MainLoop].[EXT]         # [TICK_INTERVAL_MS]ms main loop hook
-      use[OfflineProgress].[EXT]  # Background/foreground listener for offline earnings
+    [HOOKS_DIR]                   # Custom hooks / providers
     [CONSTANTS_DIR]
       theme.[EXT]                 # Colors, spacing, typography
   [ASSETS_DIR]
@@ -210,163 +200,18 @@ Prefer fine-grained selectors over subscribing to the whole store to avoid unnec
 
 ## Domain-Specific Patterns
 
-### Large Number Handling
+_Add domain-specific patterns here that are unique to your project. Delete this placeholder
+section and replace it with patterns relevant to your domain. Examples of domain-specific
+patterns: custom data types, calculation engines, scheduling logic, workflow state machines,
+real-time update loops, or any business logic that warrants a documented convention._
 
-Native numeric types lose precision for very large values. Use a custom large-number representation throughout:
+## Persistence
 
-```
-// [LOGIC_DIR]/[LARGE_NUMBER_MODULE].[EXT]
-export struct/interface [LargeNumber] {
-  mantissa: [FloatType]   // range [1, 10) or exactly 0
-  exponent: [IntType]     // power of 10
-}
+Data is persisted via [PERSISTENCE_LAYER] using the key `[SAVE_KEY]`.
 
-// e.g., 1.5 × 10^12 = 1,500,000,000,000
-
-export function [largeNum](mantissa: [FloatType], exponent = 0): [LargeNumber]
-export function [add](a: [LargeNumber], b: [LargeNumber]): [LargeNumber]
-export function [subtract](a: [LargeNumber], b: [LargeNumber]): [LargeNumber]
-export function [multiplyScalar](a: [LargeNumber], scalar: [FloatType]): [LargeNumber]
-export function [greaterThanOrEqual](a: [LargeNumber], b: [LargeNumber]): [BoolType]
-export function [format](n: [LargeNumber]): [StringType]  // → "1.5T", "2.3M", "500"
-```
-
-The [LargeNumber] struct should be a plain serializable object with no special encoding needed for [PERSISTENCE_LAYER].
-
-### Offline Progress Calculation
-
-```
-// [LOGIC_DIR]/save-manager.[EXT]
-const MAX_OFFLINE_SECONDS = [OFFLINE_CAP_HOURS] * 60 * 60  // [OFFLINE_CAP_HOURS]-hour cap
-
-export function calculateOfflineProgress(save: [SaveData], now = currentUnixSeconds()) {
-  const rawElapsed = now - save.lastSaveTime
-  const elapsedSeconds = clamp(rawElapsed, 0, MAX_OFFLINE_SECONDS)
-  const [resourcePerSecond] = calculate[Resource]PerSecond(save.[worldState])
-  const earnings = [multiplyScalar]([resourcePerSecond], elapsedSeconds)
-  return { elapsedSeconds, earnings }
-}
-```
-
-Key considerations:
-- Always cap offline time ([OFFLINE_CAP_HOURS]–24 hours) to prevent exploits
-- Use wall-clock Unix seconds for timestamps, never frame-based time
-- Calculation must be deterministic — avoid randomness in offline calculation
-- Save `lastSaveTime` on every save and whenever the app goes to background
-
-### Progression / Rebirth System
-
-```
-function calculate[PrestigeCurrency](lifetimeEarnings: [LargeNumber]): [IntType] {
-  // sqrt-based scaling: first rebirth at ~[FIRST_PRESTIGE_MILESTONE] grants ~[FIRST_PRESTIGE_REWARD] tokens
-  return floor(sqrt(toNumber(lifetimeEarnings) / [PRESTIGE_THRESHOLD]))
-}
-```
-
-Design principles:
-- Rebirth is permanent: [PERMANENT_IAP_ITEMS] and lifetime stats persist across resets
-- Prestige multipliers stack multiplicatively with base production
-- Soft cap on progression depth increases with each prestige tier
-
-### Economy Balancing
-
-- Exponential cost scaling: `base_cost * [COST_GROWTH_RATE] ^ level`
-- Growth rate [COST_GROWTH_RATE] for [ENTITY_TYPE] upgrades
-- Resource income scales slightly slower than costs to create meaningful decisions
-- [DEMAND_METRIC] scales logarithmically: `log(total_[ENTITIES] + 1)`
-- Main tick: [TICK_INTERVAL_MS]ms interval via `use[MainLoop]` hook
-
-### Main Loop
-
-```
-// [HOOKS_DIR]/use[MainLoop].[EXT]
-onMount/useEffect(() => {
-  if (!isLoaded) return
-  const id = setInterval(() => {
-    applyTick()    // economy tick → update [currency] in store
-    autoSave()     // every ~[AUTOSAVE_INTERVAL_SECONDS]s
-  }, [TICK_INTERVAL_MS])
-  return () => clearInterval(id)
-}, [isLoaded])
-```
-
-- [TICK_INTERVAL_MS]ms tick interval for game/business logic
-- UI re-renders driven by [STATE_LIBRARY] state subscriptions (no manual frame loop)
-- `use[OfflineProgress]` hook uses the platform background/foreground event API to detect app state changes
-
-## Persistence / Save System
-
-### Local Saves ([PERSISTENCE_LAYER])
-
-```
-// [LOGIC_DIR]/save-manager.[EXT]
-const SAVE_KEY = '[SAVE_KEY]'
-
-export struct/interface [SaveData] {
-  version: [IntType]
-  [currency]: [LargeNumber]
-  [worldState]: [WorldDataType]
-  lastSaveTime: [IntType]      // Unix seconds
-  [lifetimeMetric]: [LargeNumber]
-}
-
-export async function saveGame(data: [SaveData]): [VoidPromise] {
-  const toSave = { ...data, lastSaveTime: currentUnixSeconds() }
-  await [PERSISTENCE_LAYER].set([SAVE_KEY], serialize(toSave))
-}
-
-export async function loadGame(): [SaveDataPromise] {
-  try {
-    const raw = await [PERSISTENCE_LAYER].get([SAVE_KEY])
-    if (!raw) return createDefaultSave()
-    return migrateSave(deserialize(raw))
-  } catch {
-    return createDefaultSave()
-  }
-}
-```
-
-- Auto-save every [AUTOSAVE_INTERVAL_SECONDS] seconds via `use[MainLoop]`
-- Save on app backgrounding via background-state listener in `use[OfflineProgress]`
-- Include `version` field for migration support
-- Always handle missing or corrupt save data gracefully by falling back to defaults
-
-### Save Data Migration
-
-```
-const SAVE_VERSION = [SAVE_VERSION]
-
-function migrateSave(data: [SaveData]): [SaveData] {
-  if (data.version === [SAVE_VERSION]) {
-    return { ...createDefaultSave(), ...data, version: [SAVE_VERSION] }
-  }
-  // Add version-specific migration branches here as the format evolves
-  return createDefaultSave()
-}
-```
-
-### Cloud Sync (Post-Launch)
-
-- Not in MVP; planned for post-launch
-- Will use [CLOUD_SYNC_PROVIDER] or a backend; local save always serves as fallback
-
-## In-App Purchases (IAP)
-
-Use `[IAP_LIBRARY]`:
-
-```
-// Product IDs as constants
-const PRODUCTS = {
-  [PRODUCT_KEY_1]: '[BUNDLE_ID].[product_slug_1]',
-  [PRODUCT_KEY_2]: '[BUNDLE_ID].[product_slug_2]',
-  // ...
-}
-```
-
-- Validate receipts server-side when possible
-- Handle purchase restoration (required for platform app stores)
-- Store purchase state locally AND verify on load
-- [PERMANENT_IAP_ITEMS] persist through prestige/rebirth resets
+- Include a `version` field in persisted data for migration support
+- Always handle missing or corrupt data gracefully by falling back to defaults
+- The save format must support forward migration (see `save-manager.[EXT]`)
 
 ## Performance
 
@@ -426,11 +271,8 @@ Current dependencies (see `[PKG_MANIFEST]`):
 
 ## Common Pitfalls
 
-- **[LargeNumber] serialization**: Ensure the [LargeNumber] struct is a plain serializable object. Verify round-trip through [PERSISTENCE_LAYER] without loss of precision.
 - **[STATE_LIBRARY] selectors**: Always use selector functions — never subscribe to the entire store root, which triggers re-renders on every state change.
 - **Effect cleanup**: Always return a cleanup function from lifecycle effects that set up intervals or event listeners to prevent memory leaks.
-- **Background state on web**: The background/foreground event API may behave differently on web (page visibility API). Test offline progress on web separately.
-- **Wall-clock vs frame time**: Use Unix second timestamps for save times and offline progress. Never use frame-based or performance timers for persistence.
 - **Safe area**: Always account for system UI insets — device notches and status bars require padding adjustments.
 - **Platform API gaps**: Some framework APIs may not be available on all target platforms. Use platform conditional guards where needed.
 - **[NAVIGATION_LIBRARY] routing**: Screen files must live in `[SCREEN_DIR]`. The layout file configures the navigator for that directory.

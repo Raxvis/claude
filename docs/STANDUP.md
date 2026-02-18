@@ -1,10 +1,10 @@
 <!-- TEMPLATE INSTRUCTIONS
-  File: STANDUP.md
-  Purpose: Daily (or per-session) development log. Tracks what was completed last session,
+  FILE: STANDUP.md
+  PURPOSE: Daily (or per-session) development log. Tracks what was completed last session,
            what is planned for the current session, active blockers, and which agents or
            team members are working on the project.
 
-  How to customize:
+  HOW TO CUSTOMIZE:
   - Replace [PROJECT_NAME] with your project name.
   - Add a new entry at the TOP of the Log section for each session (newest first).
   - Fill in all four fields for every session — "None" is a valid value for Blockers.
@@ -40,6 +40,16 @@ Copy this block and fill it in at the start (or end) of each session:
 ## Log
 
 _No sessions recorded yet. Add the first entry using the template above._
+
+---
+
+## Related Documents
+
+| Document | Purpose |
+|----------|---------|
+| `BUGS.md` | Active bug tracker — reference when reporting blockers |
+| `MILESTONE_TASKS.md` | Current milestone task breakdown — reference for planned work |
+| `milestones/[MILESTONE]_VALIDATION.md` | Milestone acceptance record — reference when validating completed work |
 
 ---
 
