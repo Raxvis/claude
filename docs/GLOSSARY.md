@@ -28,144 +28,28 @@ a definition are themselves defined in this glossary.
 ## Core Concepts
 
 **[TERM_NAME]**
-[Define the most fundamental concept in the project. What is the primary object, action,
-or system the user interacts with? This definition should be understandable to someone
-with no prior context.] See also: [RELATED_TERM].
-
-**[TERM_NAME]**
-[Define the core loop or primary interaction cycle. Describe what it means without
-assuming the reader has read any other document.]
-
-**[TERM_NAME]**
-[Define a key state or condition the system can be in, e.g. "the state in which the
-application is running without user interaction". Note the code identifier if applicable:
-`[CODE_IDENTIFIER]`.]
-
-**[TERM_NAME]**
-[Define a key unit of measurement or progress, e.g. "the smallest indivisible unit of
-player-controlled content". Note: in the codebase this is represented by the
-`[CodeInterfaceName]` interface.]
-
-**[TERM_NAME]**
-[Define another foundational concept. Keep it to two or three sentences.]
-
----
-
-## Resources and Economy
-
-**[TERM_NAME]**
-[Define the primary currency or resource. Include its symbol or abbreviation if it has
-one, and the unit of measurement, e.g. "measured in [UNIT] per [TIME_UNIT]".]
-
-**[TERM_NAME]**
-[Define a secondary currency or resource. Note whether it persists through reset events
-and what it is primarily spent on.]
-
-**[TERM_NAME]**
-[Define a premium or special-purpose currency. Note whether it is directly purchasable
-and whether it persists through resets.]
-
-**[TERM_NAME]**
-[Define the production rate concept. Clarify the time basis, e.g. "always expressed in
-[RESOURCE] per second regardless of the internal tick interval".]
-
-**[TERM_NAME]**
-[Define the concept of a rate multiplier or bonus, e.g. "a dimensionless scalar applied
-to a base production rate. Multipliers from different sources are combined
-[additively / multiplicatively]".]
+[Description of the term.]
 
 ---
 
 ## Domain-Specific Terms
 
 **[TERM_NAME]**
-[Define the primary domain entity — the central object that users create, manage, or
-interact with throughout the experience.]
-
-**[TERM_NAME]**
-[Define a subtype or variant of the primary domain entity. Distinguish it clearly from
-related terms.]
-
-**[TERM_NAME]**
-[Define a structural or organizational unit, e.g. a container, group, or hierarchy level
-that organizes domain entities.]
-
-**[TERM_NAME]**
-[Define an action-specific term, e.g. an operation the user performs on a domain entity.]
-
-**[TERM_NAME]**
-[Define a state that a domain entity can be in, e.g. "active", "locked", "maxed".]
-
----
-
-## Progression and Unlocks
-
-**[TERM_NAME]**
-[Define the primary unit of progression — what advances as the user plays, e.g. a level,
-a count, a score. Note how it is displayed in the UI.]
-
-**[TERM_NAME]**
-[Define the concept of unlocking, i.e. the mechanism by which new content becomes
-available. Note what triggers unlocks in this project.]
-
-**[TERM_NAME]**
-[Define the upgrade concept — how an existing entity increases in power or capability.
-Note the cost model (e.g. exponential scaling).]
-
-**[TERM_NAME]**
-[Define the reset or rebirth mechanic, if applicable. Explain what the user gains and
-what is lost when a reset is performed. If there is no reset mechanic, remove this entry.]
-
-**[TERM_NAME]**
-[Define the concept of a milestone — a named, discrete point in the progression arc that
-represents a significant achievement or transition.]
+[Description of the term.]
 
 ---
 
 ## Technical Terms
 
 **[TERM_NAME]**
-[Define a technical concept that appears in the codebase and documents but might be
-unfamiliar to a new contributor, e.g. a data representation pattern, a serialization
-approach, or a precision handling technique. Reference the relevant source file.]
-
-**[TERM_NAME]**
-[Define the tick — the discrete unit of time used by the main update loop. State the
-tick interval and note that it is defined in `[CODE_FILE_PATH]`.]
-
-**[TERM_NAME]**
-[Define the save format or persistence concept. Note the storage key and version field
-convention.]
-
-**[TERM_NAME]**
-[Define the state store concept as used in this project. Reference the file where the
-store is defined.]
-
-**[TERM_NAME]**
-[Define a notable algorithmic or mathematical concept used in the project, e.g. a
-scaling formula, a capping approach, or a normalization technique.]
+[Description of the term.]
 
 ---
 
 ## UI Terms
 
 **[TERM_NAME]**
-[Define the primary screen or view the user sees during normal use.]
-
-**[TERM_NAME]**
-[Define a key UI element or component, e.g. the main content list, the resource display,
-or the primary action button.]
-
-**[TERM_NAME]**
-[Define a UI state, e.g. the state of a button when the user cannot afford the action it
-represents.]
-
-**[TERM_NAME]**
-[Define a modal or overlay concept used in the UI, e.g. the dialog that appears when
-offline progress is applied.]
-
-**[TERM_NAME]**
-[Define a layout term, e.g. the direction in which the primary list is ordered visually.]
+[Description of the term.]
 
 ---
 
@@ -178,9 +62,5 @@ offline progress is applied.]
 | [ABBR_3] | [FULL_TERM_3] |
 | [ABBR_4] | [FULL_TERM_4] |
 | [ABBR_5] | [FULL_TERM_5] |
-| IAP | In-App Purchase |
 | MVP | Minimum Viable Product |
 | PRD | Product Requirements Document |
-| KPI | Key Performance Indicator |
-| ARPU | Average Revenue Per User |
-| ARPPU | Average Revenue Per Paying User |
