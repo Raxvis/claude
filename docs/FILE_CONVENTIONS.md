@@ -60,7 +60,7 @@ docs/
     [COMPONENT_NAME]_COMPONENT.md # Per-component UI specification
 ```
 
-> **Note:** Subdirectories (`milestones/`, `architecture/`, `ui-specs/`) are created when the first document of that type is needed. They do not exist in the base template.
+> **Note:** The base template stores document templates in the `docs/` root using generic names (e.g., `ARCH_MODULE.md`, `UI_SPEC.md`, `MILESTONE_TASKS.md`). The subdirectory structure shown above (`milestones/`, `architecture/`, `ui-specs/`) is created when the first instance of each document type is produced. Instance files use the naming patterns shown in the diagram (e.g., `[MODULE_NAME]_MODULE.md`).
 
 ---
 
@@ -262,3 +262,7 @@ These conventions exist for three reasons:
 3. **Reviewability.** Consistent naming makes it possible to review the completeness of
    documentation at a glance: if a milestone exists in `PRD.md` but has no corresponding
    `_TASKS.md` and `_VALIDATION.md`, it is immediately visible.
+
+---
+
+_Last updated: [YYYY-MM-DD]_

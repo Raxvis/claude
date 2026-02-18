@@ -9,7 +9,7 @@ This is a **multi-agent AI-assisted development workflow template**. It contains
 ## Directory Structure
 
 - **`root/`** — Files copied to a target project's root (CLAUDE.md template, config templates)
-- **`agents/`** — 16 agent role definitions (product, architect, UI, coder, reviewer, tester, debugger, refactor, docs-writer, ux-critic, security, performance, release, asset-gen, validator, bug-gatherer). Each file defines one agent's purpose, authority, inputs, outputs, and decision log
+- **`agents/`** — 16 agent role definitions plus a master `README.md` (product, architect, UI, coder, reviewer, tester, debugger, refactor, docs-writer, ux-critic, security, performance, release, asset-gen, validator, bug-gatherer). Each file defines one agent's purpose, authority, inputs, outputs, and decision log
 - **`docs/`** — Shared reference document templates (PRD, architecture, glossary, UI specs, milestone tracking, etc.)
 
 ## Placeholder Convention

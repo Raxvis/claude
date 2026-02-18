@@ -329,3 +329,7 @@ All tests must pass before any change is merged to the main branch.
 5. Build for production: `[BUILD_CMD]`
 
 A pull request with failing tests or coverage below the defined thresholds must not be merged.
+
+---
+
+_Last updated: [YYYY-MM-DD]_

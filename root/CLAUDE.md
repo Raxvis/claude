@@ -17,6 +17,9 @@ HOW TO FILL IN THIS TEMPLATE:
   6. Update the Memory Imports section to point to the docs that exist in your repo.
 
 PLACEHOLDER LEGEND:
+  The authoritative placeholder reference is in README.md at the repository root.
+  This legend covers placeholders used in this file. See README.md for the full set.
+
   [PROJECT_NAME]          — The name of the project (e.g. "My App")
   [PROJECT_TYPE]          — What kind of product it is (e.g. "cross-platform mobile game",
                             "SaaS web application", "CLI tool")
@@ -47,6 +50,31 @@ PLACEHOLDER LEGEND:
   [HOOKS_DIR]             — Directory for reusable hooks/providers (e.g. "src/hooks/")
   [CONSTANTS_DIR]         — Directory for constants and config (e.g. "src/constants/")
   [ASSETS_DIR]            — Directory for static assets (e.g. "assets/")
+  [EXT]                   — File extension for source files (e.g. "tsx", "dart", "rb")
+  [MAIN_SCREEN]           — Core feature screen file name (e.g. "game", "dashboard")
+  [SHOP_SCREEN]           — Store/shop screen file name (e.g. "shop", "store")
+  [APP_STORE]             — State store file name (e.g. "appStore", "gameStore")
+  [FRAMEWORK_CONFIG]      — Framework configuration file (e.g. "app.json", "pubspec.yaml")
+  [PKG_MANIFEST]          — Package/dependency manifest file (e.g. "package.json")
+  [TYPE_CONFIG]           — Type checker configuration file (e.g. "tsconfig.json")
+  [BUNDLER_CONFIG]        — Bundler/build configuration file (e.g. "metro.config.js",
+                            "webpack.config.js")
+  [LOWER_CASE_CONVENTION] — Naming convention for lowercase identifiers (e.g. "camelCase",
+                            "snake_case")
+  [PASCAL_CASE_CONVENTION] — Naming convention for type-level identifiers (e.g. "PascalCase")
+  [UPPER_SNAKE_CONVENTION] — Naming convention for constants (e.g. "UPPER_SNAKE_CASE",
+                             "SCREAMING_SNAKE_CASE")
+  [ORIENTATION]           — Screen orientation mode (e.g. "Portrait", "Landscape")
+  [INPUT_METHOD]          — Primary input method (e.g. "touch", "mouse", "keyboard")
+  [MIN_TOUCH_TARGET]      — Minimum interactive element size (e.g. "44×44pt", "48dp")
+  [PLATFORM_WEB_COMPAT]   — Web platform compatibility package (e.g. "react-native-web")
+  [SAFE_AREA_LIB]         — Safe area / system inset handling library
+                            (e.g. "react-native-safe-area-context")
+  [OTHER_DEP_1]           — Additional project dependency (replace with actual package name)
+  [OTHER_DEP_2]           — Additional project dependency (replace with actual package name)
+  [TARGET_PLATFORM_1]     — First platform for Build & Test section (e.g. "iOS simulator")
+  [TARGET_PLATFORM_2]     — Second platform for Build & Test section (e.g. "Android emulator")
+  [TARGET_PLATFORM_3]     — Third platform for Build & Test section (e.g. "web browser")
 
 After filling in the template, delete this entire comment block before committing.
 =========================
@@ -94,6 +122,10 @@ After filling in the template, delete this entire comment block before committin
 - **Build**: `[DEV_SERVER_CMD]` (dev) / `[BUILD_CMD]` (production)
 
 ## [LANGUAGE] Style Conventions
+
+> **Note:** Bracketed names in code examples below (e.g., `[MyComponent]`, `[DomainType]`,
+> `[doAction]`) are illustrative example identifiers, not project placeholders. They show
+> naming patterns you should follow using your own project-specific names.
 
 - **[LOWER_CASE_CONVENTION]** for variables, functions, and file names
 - **[PASCAL_CASE_CONVENTION]** for types, interfaces, UI components, and enums
@@ -305,6 +337,7 @@ Current dependencies (see `[PKG_MANIFEST]`):
   ```
 
 ## Memory Imports
+@import docs/README.md
 @import docs/PRD.md
 @import docs/CONCEPT.md
 @import docs/ADDITIONAL.md

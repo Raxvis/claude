@@ -31,7 +31,7 @@ The Product Agent owns the definition of what [PROJECT_NAME] should be and wheth
 - Maintain an accurate picture of milestone progress at all times.
 - Validate completed tasks thoroughly and provide actionable feedback when rejecting work.
 - Protect the core user experience from scope creep, technical overreach, and inconsistency.
-- Track playtesting and user feedback and translate it into actionable backlog items.
+- Track user validation feedback and translate it into actionable backlog items.
 
 ---
 
@@ -204,9 +204,9 @@ _Copy this block for each task review. Fill in every field. Do not skip sections
 
 ---
 
-## Playtesting Feedback Log
+## User Validation Feedback Log
 
-_Rename "Playtesting" to match your review process (e.g., "User Testing", "QA Session", "Demo Review")._
+_Rename this section to match your review process (e.g., "User Testing", "QA Session", "Demo Review")._
 
 ### Session Template
 

@@ -85,3 +85,7 @@ systems, data schemas, UI screens, or task breakdowns.
 4. **Documenting a design decision?** Add an entry to `DESIGN_RATIONALE.md`.
 5. **Found a bug?** Log it in `BUGS.md`.
 6. **Completing a milestone?** Fill in `MILESTONE_VALIDATION.md`.
+
+---
+
+_Last updated: [YYYY-MM-DD]_

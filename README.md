@@ -108,8 +108,36 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 | Placeholder | Description | Example value |
 |---|---|---|
 | `[TARGET_PLATFORMS]` | Comma-separated list of deployment targets | web, iOS, Android, desktop |
-| `[TOUCH_TARGET_SIZE]` | Minimum interactive element size for touch interfaces | any size specification in platform units |
+| `[PLATFORM_1]` | Primary target platform name | iOS |
+| `[PLATFORM_2]` | Secondary target platform name | Android |
+| `[MIN_TOUCH_TARGET]` | Minimum interactive element size for touch interfaces | any size specification in platform units |
 | `[THEME_FILE_PATH]` | Relative path from the project root to the theme or design-token file | path to the project's theme constants |
+
+### Testing
+
+| Placeholder | Description | Example value |
+|---|---|---|
+| `[COVERAGE_TARGET]` | Minimum code coverage percentage threshold | 80% |
+| `[BRANCH_TARGET]` | Minimum branch coverage percentage threshold | 80% |
+
+### Performance
+
+| Placeholder | Description | Example value |
+|---|---|---|
+| `[STARTUP_METRIC]` | Maximum acceptable app startup time | 2s |
+| `[TICK_METRIC]` | Maximum acceptable update loop duration | 16ms |
+| `[RENDER_METRIC]` | Maximum acceptable frame render time | 16ms |
+| `[MEMORY_METRIC]` | Maximum acceptable memory usage | 200MB |
+| `[STORAGE_METRIC]` | Maximum acceptable local storage usage | 50MB |
+
+### Process
+
+| Placeholder | Description | Example value |
+|---|---|---|
+| `[SESSION_TYPE]` | Type of user validation session | playtest, usability test, A/B test |
+| `[MAX_AGE_DAYS]` | Maximum age in days before a task is flagged stale | 14 |
+| `[MAX_BLOCKED_DAYS]` | Maximum days a task can remain blocked before escalation | 7 |
+| `[CRITICAL_BLOCKED_DAYS]` | Maximum days a critical task can remain blocked | 3 |
 
 ### Agents
 
@@ -144,20 +172,13 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 
 All files in the template system are listed below with a short description of each file's purpose.
 
-### root/ (8 files)
+### root/ (1 file)
 
 | File | Description |
 |---|---|
 | `root/CLAUDE.md` | Top-level context file read first by every agent; defines project identity, structure, conventions, and run commands |
-| `root/.gitignore` | Standard ignore rules for build artifacts, secrets, and generated files |
-| `root/tsconfig.json` | Compiler configuration for strict static type checking |
-| `root/babel.config.js` | Transpiler configuration for the framework's build pipeline |
-| `root/metro.config.js` | Bundler configuration for module resolution and asset handling |
-| `root/app.json` | Application manifest: name, identifier, icon references, platform targets |
-| `root/package.json` | Dependency manifest and npm script definitions |
-| `root/.env.example` | Template for environment variable definitions; contains no real secrets |
 
-### agents/ (16 files)
+### agents/ (17 files)
 
 | File | Description |
 |---|---|
@@ -177,6 +198,7 @@ All files in the template system are listed below with a short description of ea
 | `agents/asset-gen.md` | Defines the media asset generation agent; responsible for specifying and producing visual assets |
 | `agents/validator.md` | Defines the validator agent; enforces agent protocols, resolves conflicts, tracks milestones, runs retrospectives |
 | `agents/bug-gatherer.md` | Defines the bug gatherer agent; collects and structures bug reports for Product triage and Coder resolution |
+| `agents/README.md` | Master overview of the agent system: roster, interaction diagram, per-milestone and per-task workflows, and placeholder reference |
 
 ### docs/ (22 files)
 

@@ -331,3 +331,7 @@ They are listed here to inform architectural decisions made during MVP developme
 |---------|---------------|
 | [VERSION] | [CHANGE_SUMMARY] |
 | [VERSION] | [CHANGE_SUMMARY] |
+
+---
+
+_Last updated: [YYYY-MM-DD]_

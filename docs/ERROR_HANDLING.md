@@ -237,3 +237,7 @@ When an error must be surfaced to the user, the message must meet these standard
 | Unexpected error | "Something went wrong. Please restart the app. Your progress has been saved." |
 
 Adapt these templates to the specific context and tone of [PROJECT_NAME].
+
+---
+
+_Last updated: [YYYY-MM-DD]_

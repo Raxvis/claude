@@ -569,9 +569,9 @@ implementation of that module. Coder should not begin implementation of an undoc
 
 ---
 
-## Technical Playtesting Feedback
+## Technical Validation Feedback
 
-_Architecture reviews performance and correctness observations from playtesting sessions._
+_Architecture reviews performance and correctness observations from user validation sessions._
 
 | Session Date | Observation | Module Affected | Action |
 |---|---|---|---|

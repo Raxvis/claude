@@ -59,7 +59,9 @@ The **Validator** agent does not override any of the above; it enforces that all
 
 ## Agent File Structure
 
-Every agent file follows this standard structure:
+Every agent file follows a core structure of standard sections, listed below. Agents may extend this structure with domain-specific appendix sections (e.g., style guides, checklists, workflow definitions, feedback logs) placed after the standard sections. These extensions are expected and do not break the agent system — they provide domain context that the core sections cannot capture.
+
+### Core Sections
 
 | Section | Description |
 |---|---|
@@ -68,9 +70,21 @@ Every agent file follows this standard structure:
 | **Authority** | What decisions this agent can make unilaterally. |
 | **Inputs** | What this agent receives from other agents or external sources. |
 | **Outputs** | What this agent produces and who consumes it. |
+| **Interaction Rules** | How this agent communicates with other agents. |
 | **Current Work** | Active tasks, queues, and in-progress items. |
-| **Decisions Log** | Record of notable decisions made by this agent and their rationale. Log when: accepting a non-standard approach, deviating from convention, choosing between alternatives, or establishing a precedent that future work should follow. |
+| **Decisions Log** | Record of notable decisions made by this agent and their rationale. Log when: accepting a non-standard approach, deviating from convention, choosing between alternatives, or establishing a precedent that future work should follow. Standard format: `Date / Decision / Rationale / Impact`. The Architect agent uses an extended five-column format (`Date / Decision / Alternatives Considered / Rationale / Impact`) to capture architectural decision records. |
 | **Future Work** | Deferred items, nice-to-haves, and post-launch ideas. |
+
+### Domain-Specific Extensions
+
+Agents with specialized responsibilities include additional sections after the core sections. Examples:
+
+- **Architect**: Architecture Document Templates, Code Review Checklist, Performance Budgets, Technical Validation Feedback
+- **UI**: Style Guide, Screen Specifications, UX Review Checklist
+- **Validator**: Session-Start Checklist, Conflict Resolution Protocol, Agent Status Dashboard
+- **Product**: Task Validation Checklist, User Validation Feedback Log
+- **Coder**: Pre-Handoff Checklist, Work Selection Strategy, Implementation Status
+- **Bug Gatherer**: Workflow, Severity Rubric, Bug Report Template
 
 ---
 

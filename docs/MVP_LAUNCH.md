@@ -12,7 +12,7 @@
   - Add entries to bug/issue tables as they are discovered.
   - Update the Requirements Alignment table from your PRD or requirements document.
   - Work through the Launch Checklist and mark items Complete / In Progress / Not Started.
-  - Status values used throughout: Complete, In Progress, Not Started, Blocked, N/A.
+  - Status values used throughout: Complete / In Progress / Not Started / Blocked / N/A.
 -->
 
 # [PROJECT_NAME] — Launch Readiness Audit
