@@ -139,27 +139,6 @@ fails due to connectivity, timeout, or server error.
 
 ---
 
-### Time Manipulation
-
-**Scenario:** The device clock has been set backward or jumped forward by an implausible
-amount, potentially distorting offline progress calculations.
-
-**Handling:**
-- If `currentTime < lastSaveTime`, treat elapsed time as 0. Log a warning.
-- If elapsed time exceeds `[MAX_OFFLINE_SECONDS]`, clamp to `[MAX_OFFLINE_SECONDS]`.
-- Never apply negative offline progress.
-- Do not alert the user; handle silently except in development mode.
-
-```[LANGUAGE]
-const rawElapsed = now - lastSaveTime;
-if (rawElapsed < 0) {
-  [log].warn('[MODULE_NAME] detected backward clock', { now, lastSaveTime });
-}
-const elapsedSeconds = Math.min(Math.max(rawElapsed, 0), [MAX_OFFLINE_SECONDS]);
-```
-
----
-
 ### Asset Loading Failures
 
 **Scenario:** An image, font, or other asset fails to load.
