@@ -106,7 +106,7 @@ _Run at the beginning of every working session._
 When two agents disagree and cannot resolve the issue independently:
 
 1. **Document the conflict** in the Conflicts table below. Include both positions and the specific point of disagreement.
-2. **Apply the priority hierarchy**: Product > Architecture > UI > Audio/Media. The higher-priority agent's position is the default resolution.
+2. **Apply the priority hierarchy**: Product > Architecture > UI. The higher-priority agent's position is the default resolution.
 3. **Check for exceptions**: If the lower-priority agent has a blocking technical or legal reason, escalate to a human stakeholder before applying the hierarchy.
 4. **Issue a written resolution**: Record the decision, rationale, and which agent must change course in the Conflicts table. Update the resolution status.
 5. **Notify all agents**: The Validator informs all agents of the resolution at the start of the next session.
@@ -169,7 +169,6 @@ _Run this checklist when a task is submitted for Product review._
 | Product | _(empty)_ | | | |
 | Architecture | _(empty)_ | | | |
 | UI | _(empty)_ | | | |
-| Audio/Media | _(empty)_ | | | |
 | Builder | _(empty)_ | | | |
 | Bug Gatherer | _(empty)_ | | | |
 

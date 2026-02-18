@@ -23,8 +23,6 @@
 |----------|--------|--------|-----------|
 | App Icons & Branding | | | |
 | Visual Assets | | | |
-| Audio — Sound Effects | | | |
-| Audio — Background Music | | | |
 | Store Listing Assets | | | |
 | **Total** | | | |
 
@@ -63,25 +61,6 @@ Sprites, illustrations, backgrounds, and other in-[DOMAIN_ENTITY] visual content
 | Color depth | [e.g., 32-bit RGBA] |
 | Format | [e.g., PNG with transparency] |
 | Naming convention | [e.g., `category_name_variant.ext`] |
-
----
-
-## Audio — Sound Effects
-
-| Sound Name | Trigger | Format | Duration | Exists | Notes |
-|------------|---------|--------|----------|--------|-------|
-| [SOUND_NAME] | [when it plays] | [FORMAT] | [e.g., <1s] | | |
-| [SOUND_NAME] | [when it plays] | [FORMAT] | [e.g., <1s] | | |
-| [SOUND_NAME] | [when it plays] | [FORMAT] | [e.g., <1s] | | |
-
----
-
-## Audio — Background Music
-
-| Track Name | Context | Format | Duration | Loops | Exists | Notes |
-|------------|---------|--------|----------|-------|--------|-------|
-| [TRACK_NAME] | [where it plays] | [FORMAT] | [e.g., 2 min] | Yes/No | | |
-| [TRACK_NAME] | [where it plays] | [FORMAT] | [e.g., 2 min] | Yes/No | | |
 
 ---
 

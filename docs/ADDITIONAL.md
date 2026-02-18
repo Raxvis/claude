@@ -367,7 +367,7 @@ Post-launch social features under consideration:
 
 ---
 
-## Media and Audio
+## Media and Visual Style
 
 ### Visual Style
 
@@ -384,12 +384,3 @@ not use inline hex values.
 | [ASSET_TYPE_1] | [FORMAT] | [RESOLUTION] | [NOTES] |
 | [ASSET_TYPE_2] | [FORMAT] | [RESOLUTION] | [NOTES] |
 | [ASSET_TYPE_3] | [FORMAT] | [RESOLUTION] | [NOTES] |
-
-### Audio
-
-[PROJECT_NAME] [does / does not] include audio in the MVP.
-
-- **Music:** [DESCRIPTION or "Not in MVP"]
-- **Sound effects:** [DESCRIPTION or "Not in MVP"]
-- **Accessibility:** All audio must be optional. Critical information conveyed by sound
-  must also be conveyed visually.

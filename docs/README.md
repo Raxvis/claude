@@ -54,7 +54,7 @@ These documents track the live state of the project: bugs, progress, and milesto
 |------|-------------|
 | `BUGS.md` | Active bug tracker. Documents known issues, reproduction steps, and resolution status. |
 | `CHANGELOG.md` | Chronological log of notable changes across releases and milestones. |
-| `ASSETS.md` | Registry of all project assets (images, audio, fonts, etc.) with status and source information. |
+| `ASSETS.md` | Registry of all project assets (images, fonts, etc.) with status and source information. |
 | `MVP_LAUNCH.md` | Checklist and criteria for the initial public release. |
 | `STANDUP.md` | Running log of progress updates, blockers, and decisions from work sessions. |
 | `MILESTONE_VALIDATION.md` | Acceptance records confirming each milestone has met its stated criteria. |

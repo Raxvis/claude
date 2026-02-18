@@ -162,12 +162,12 @@ const elapsedSeconds = Math.min(Math.max(rawElapsed, 0), [MAX_OFFLINE_SECONDS]);
 
 ### Asset Loading Failures
 
-**Scenario:** An image, font, audio file, or other asset fails to load.
+**Scenario:** An image, font, or other asset fails to load.
 
 **Handling:**
 - All asset loading must occur inside a try/catch or with an `onError` handler.
-- For non-critical assets (decorative images, audio), fail silently and render a
-  fallback (blank space, placeholder, or no sound).
+- For non-critical assets (decorative images), fail silently and render a
+  fallback (blank space or placeholder).
 - For critical assets (primary font, core UI icons), surface a user-facing error and
   prevent the application from entering an inconsistent visual state.
 - Log all asset failures with the asset path and error details.

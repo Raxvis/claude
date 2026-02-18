@@ -172,7 +172,7 @@ All 28 files in the template system are listed below with a short description of
 | `agents/security.md` | Defines the security audit agent; responsible for identifying vulnerabilities and insecure patterns |
 | `agents/performance.md` | Defines the performance agent; responsible for profiling, identifying bottlenecks, and proposing optimisations |
 | `agents/release.md` | Defines the release preparation agent; responsible for changelogs, versioning, and build verification |
-| `agents/asset-gen.md` | Defines the media asset generation agent; responsible for specifying and producing visual or audio assets |
+| `agents/asset-gen.md` | Defines the media asset generation agent; responsible for specifying and producing visual assets |
 
 ### docs/ (8 files)
 

@@ -7,7 +7,7 @@ HOW TO CUSTOMIZE:
 2. Replace [AI_MODEL] with the model used by all agents (e.g., the model powering your AI assistant).
 3. Replace [FEATURE_AREA_*] placeholders with real feature areas, modules, or subsystems in your project.
 4. Replace [ARTIFACT_TYPE_*] with the categories of deliverables your project produces.
-5. Review the Agent table and remove rows for agents your project does not need (e.g., remove Audio if you have no media).
+5. Review the Agent table and remove rows for agents your project does not need.
 6. Update the ASCII diagram to reflect any changes to the agent lineup.
 7. Update the Documentation Placement table to match your actual folder/file conventions.
 -->
@@ -29,7 +29,6 @@ All agents run on **[AI_MODEL]**.
 | Product | `product.md` | Owns requirements, validates completed tasks against acceptance criteria, maintains the feature backlog, and signs off on milestones. |
 | Architecture | `architecture.md` | Owns system design, module boundaries, data schemas, and code review standards. Produces architecture documents that Builder implements. |
 | UI | `ui.md` | Owns visual design, layout specifications, the style guide, and interaction patterns. Produces screen specs that Builder implements. |
-| Audio / Media | `audio.md` | Owns all media assets (audio, video, or other time-based media). Optional — delete if your project has no media requirements. |
 | Builder | `builder.md` | Implements features as directed by Product, Architecture, and UI. Writes all production code and performs pre-handoff self-review. |
 | Validator | `validator.md` | Owns the process. Enforces agent protocols, resolves conflicts between agents, tracks milestone progress, and runs retrospectives. |
 | Bug Gatherer | `bug-gatherer.md` | Collects and structures bug reports from testers or stakeholders. Produces standardized reports that Product triages and Builder fixes. |
@@ -43,7 +42,6 @@ When agents disagree, the following hierarchy applies:
 1. **Product** — business requirements and user experience goals take highest priority
 2. **Architecture** — system design constraints and technical feasibility
 3. **UI** — visual and interaction design
-4. **Audio / Media** — media requirements
 
 The **Validator** agent does not override any of the above; it enforces that all agents follow the documented process.
 
@@ -75,13 +73,13 @@ Every agent file follows this standard structure:
                         └──────┬──────┘
                                │ requirements & acceptance criteria
                ┌───────────────┼───────────────┐
-               ▼               ▼               ▼
-      ┌──────────────┐ ┌─────────────┐ ┌──────────────┐
-      │ Architecture │ │     UI      │ │    Audio/    │
-      │    Agent     │ │    Agent    │ │  Media Agent │
-      └──────┬───────┘ └──────┬──────┘ └──────┬───────┘
-             │ arch docs      │ UI specs       │ media specs
-             └───────────────►│◄──────────────┘
+               ▼               ▼               │
+      ┌──────────────┐ ┌─────────────┐         │
+      │ Architecture │ │     UI      │         │
+      │    Agent     │ │    Agent    │         │
+      └──────┬───────┘ └──────┬──────┘         │
+             │ arch docs      │ UI specs       │
+             └───────────────►│◄───────────────┘
                               ▼
                       ┌──────────────┐
                       │   Builder    │
@@ -109,8 +107,7 @@ Every agent file follows this standard structure:
 1. **Product** defines milestone goals and acceptance criteria.
 2. **Architecture** produces architecture documents for all new modules.
 3. **UI** produces screen specifications for all new interfaces.
-4. **Audio/Media** produces asset specifications for any new media.
-5. **Builder** implements features using the above documents as authoritative references.
+4. **Builder** implements features using the above documents as authoritative references.
 6. **Product** validates completed work against acceptance criteria.
 7. **Validator** runs a milestone retrospective.
 
@@ -146,7 +143,6 @@ At the start of every working session:
 | Feature requirements | Product | `product.md` → Decisions Log |
 | Architecture documents | Architecture | `architecture.md` → Architecture Documents table |
 | Screen specifications | UI | `ui.md` → Screen Specifications section |
-| Media asset specs | Audio/Media | `audio.md` → Media Map |
 | Bug reports | Bug Gatherer | `bug-gatherer.md` or issue tracker |
 | Milestone retrospectives | Validator | `validator.md` → Milestone Retrospective |
 | Decisions | Each agent | Agent's own Decisions Log table |

@@ -9,7 +9,7 @@ This is a **multi-agent AI-assisted development workflow template**. It contains
 ## Directory Structure
 
 - **`root/`** — Files copied to a target project's root (CLAUDE.md template, config templates)
-- **`agents/`** — Agent role definitions (product, architecture, UI, audio, builder, validator, bug-gatherer). Each file defines one agent's purpose, authority, inputs, outputs, and decision log
+- **`agents/`** — Agent role definitions (product, architecture, UI, builder, validator, bug-gatherer). Each file defines one agent's purpose, authority, inputs, outputs, and decision log
 - **`docs/`** — Shared reference document templates (PRD, architecture, glossary, UI specs, milestone tracking, etc.)
 
 ## Placeholder Convention
@@ -20,7 +20,7 @@ When editing templates, preserve placeholder tokens — do not replace them with
 
 ## Agent System Architecture
 
-Seven agent roles form a hierarchy: **Product** (requirements) → **Architecture** + **UI** + **Audio/Media** (design specs) → **Builder** (implementation) → **Product** (validation). **Validator** enforces process. **Bug Gatherer** feeds reports to Product. Conflict resolution priority: Product > Architecture > UI > Audio.
+Six agent roles form a hierarchy: **Product** (requirements) → **Architecture** + **UI** (design specs) → **Builder** (implementation) → **Product** (validation). **Validator** enforces process. **Bug Gatherer** feeds reports to Product. Conflict resolution priority: Product > Architecture > UI.
 
 ## Key Files
 

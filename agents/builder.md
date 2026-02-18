@@ -58,7 +58,6 @@ The Builder Agent may NOT:
 | Product | Task definitions with acceptance criteria |
 | Architecture | Approved architecture documents and code review feedback |
 | UI | Approved screen specifications |
-| Audio/Media | Approved media asset specifications |
 | Validator | Process guidance and escalation decisions |
 
 ---
