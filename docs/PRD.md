@@ -29,7 +29,7 @@
 
 [PROJECT_NAME] is a [PRODUCT_TYPE] for [TARGET_PLATFORM_LIST]. It targets [PRIMARY_USER_SEGMENT]
 who want [USER_NEED]. The product is differentiated by [KEY_DIFFERENTIATOR] and is
-monetized via [MONETIZATION_MODEL].
+targeting [PRIMARY_USER_SEGMENT].
 
 **MVP scope:** [2-3 sentences summarizing what will ship in the initial release and what
 is explicitly deferred to post-launch.]

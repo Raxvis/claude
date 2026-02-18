@@ -32,8 +32,6 @@ PLACEHOLDER LEGEND:
                             "SharedPreferences")
   [NAVIGATION_LIBRARY]    — Routing/navigation solution (e.g. "React Router", "GoRouter")
   [TARGET_PLATFORMS]      — Deployment targets (e.g. "iOS, Android, Web")
-  [MONETIZATION_MODEL]    — How the product is monetized (e.g. "IAP only", "subscription",
-                            "freemium with ads")
   [DEV_SERVER_CMD]        — Command to start the dev server (e.g. "npm start", "flutter run")
   [TYPE_CHECK_CMD]        — Command to run the type checker (e.g. "npx tsc --noEmit")
   [TEST_CMD]              — Command to run the test suite (e.g. "npm test", "flutter test")
@@ -42,7 +40,6 @@ PLACEHOLDER LEGEND:
   [PKG_ADD_CMD]           — How to add a new dependency (e.g. "npm install", "flutter pub add")
   [SAVE_KEY]              — Storage key for persisted data (e.g. "my_app_data_v1")
   [SAVE_VERSION]          — Current save format version number (e.g. "1")
-  [BUNDLE_ID]             — Application bundle/package identifier
   [SCREEN_DIR]            — Directory where screen/page files live (e.g. "app/", "pages/")
   [LOGIC_DIR]             — Directory for pure business logic (e.g. "src/game/", "lib/domain/")
   [STORE_DIR]             — Directory for state management files (e.g. "src/store/")
@@ -52,8 +49,6 @@ PLACEHOLDER LEGEND:
   [ASSETS_DIR]            — Directory for static assets (e.g. "assets/")
   [EXT]                   — File extension for source files (e.g. "tsx", "dart", "rb")
   [MAIN_SCREEN]           — Core feature screen file name (e.g. "game", "dashboard")
-  [SHOP_SCREEN]           — Store/shop screen file name (e.g. "shop", "store")
-  [APP_STORE]             — State store file name (e.g. "appStore", "gameStore")
   [FRAMEWORK_CONFIG]      — Framework configuration file (e.g. "app.json", "pubspec.yaml")
   [PKG_MANIFEST]          — Package/dependency manifest file (e.g. "package.json")
   [TYPE_CONFIG]           — Type checker configuration file (e.g. "tsconfig.json")
@@ -64,12 +59,8 @@ PLACEHOLDER LEGEND:
   [PASCAL_CASE_CONVENTION] — Naming convention for type-level identifiers (e.g. "PascalCase")
   [UPPER_SNAKE_CONVENTION] — Naming convention for constants (e.g. "UPPER_SNAKE_CASE",
                              "SCREAMING_SNAKE_CASE")
-  [ORIENTATION]           — Screen orientation mode (e.g. "Portrait", "Landscape")
   [INPUT_METHOD]          — Primary input method (e.g. "touch", "mouse", "keyboard")
   [MIN_TOUCH_TARGET]      — Minimum interactive element size (e.g. "44×44pt", "48dp")
-  [PLATFORM_WEB_COMPAT]   — Web platform compatibility package (e.g. "react-native-web")
-  [SAFE_AREA_LIB]         — Safe area / system inset handling library
-                            (e.g. "react-native-safe-area-context")
   [OTHER_DEP_1]           — Additional project dependency (replace with actual package name)
   [OTHER_DEP_2]           — Additional project dependency (replace with actual package name)
   [TARGET_PLATFORM_1]     — First platform for Build & Test section (e.g. "iOS simulator")
@@ -84,7 +75,7 @@ After filling in the template, delete this entire comment block before committin
 
 ## Project Overview
 
-[PROJECT_NAME] is a [PROJECT_TYPE] built with **[FRAMEWORK] ([FRAMEWORK_VERSION])**. Targets **[TARGET_PLATFORMS]**. Monetized via **[MONETIZATION_MODEL]**.
+[PROJECT_NAME] is a [PROJECT_TYPE] built with **[FRAMEWORK] ([FRAMEWORK_VERSION])**. Targets **[TARGET_PLATFORMS]**.
 
 ## Project Structure
 
@@ -97,8 +88,7 @@ After filling in the template, delete this entire comment block before committin
     settings.[EXT]                # Settings screen
   src/
     [LOGIC_DIR]                   # Pure [LANGUAGE] business logic (no UI framework)
-    [STORE_DIR]
-      [APP_STORE].[EXT]           # [STATE_LIBRARY] store: all app state and actions
+    [STORE_DIR]                   # [STATE_LIBRARY] store: all app state and actions
     [COMPONENTS_DIR]              # UI components
     [HOOKS_DIR]                   # Custom hooks / providers
     [CONSTANTS_DIR]
@@ -211,20 +201,19 @@ Screen files:
 - `[SCREEN_DIR]/index.[EXT]` — Main menu (title, start button, settings)
 - `[SCREEN_DIR]/[MAIN_SCREEN].[EXT]` — Core gameplay / feature screen + HUD
 - `[SCREEN_DIR]/settings.[EXT]` — Settings / options
-- `[SCREEN_DIR]/[SHOP_SCREEN].[EXT]` — Purchases / store (future)
 
 ### State Management ([STATE_LIBRARY])
 
-All application state lives in `[STORE_DIR]/[APP_STORE].[EXT]`. UI components read via selectors; actions mutate state:
+All application state lives in `[STORE_DIR]`. UI components read via selectors; actions mutate state:
 
 ```
-import { use[AppStore] } from '../[STORE_DIR]/[APP_STORE]'
+import { useStore } from '../[STORE_DIR]/store'
 
 // Read a state slice
-const [currency] = use[AppStore]((s) => s.[currency])
+const [currency] = useStore((s) => s.[currency])
 
 // Call an action
-const [doAction] = use[AppStore]((s) => s.[doAction])
+const [doAction] = useStore((s) => s.[doAction])
 [doAction]()
 ```
 
@@ -258,7 +247,7 @@ Data is persisted via [PERSISTENCE_LAYER] using the key `[SAVE_KEY]`.
 
 ## Input Handling
 
-[ORIENTATION] orientation, [INPUT_METHOD]-based. Use the framework's recommended pressable primitive for all interactive elements:
+[INPUT_METHOD]-based interaction. Use the framework's recommended pressable primitive for all interactive elements:
 
 ```
 <[PressableComponent]
@@ -296,8 +285,6 @@ Current dependencies (see `[PKG_MANIFEST]`):
 - **[NAVIGATION_LIBRARY]** — routing / navigation
 - **[STATE_LIBRARY]** — state management
 - **[PERSISTENCE_LAYER]** — local persistence
-- **[PLATFORM_WEB_COMPAT]** — web platform support (if applicable)
-- **[SAFE_AREA_LIB]** — system inset / safe area handling
 - **[OTHER_DEP_1]** — [description]
 - **[OTHER_DEP_2]** — [description]
 
