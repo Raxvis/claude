@@ -12,6 +12,8 @@ HOW TO CUSTOMIZE:
    in sync.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Performance Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Performance Agent
 
 **Model**: [AI_MODEL]

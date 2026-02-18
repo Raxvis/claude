@@ -10,6 +10,8 @@ HOW TO CUSTOMIZE:
 4. Update the Interaction Rules to reflect your team's review workflow.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Reviewer Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Reviewer Agent
 
 **Model**: [AI_MODEL]

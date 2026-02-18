@@ -9,6 +9,8 @@ HOW TO CUSTOMIZE:
 4. Update the Test Types table to match the test categories relevant to your project.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Tester Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Tester Agent
 
 **Model**: [AI_MODEL]

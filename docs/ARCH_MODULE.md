@@ -33,6 +33,8 @@
 
 [Describe what this module does, why it exists, and what problem it solves. 2–4 sentences.]
 
+**Related documents:** If this module has a UI, see the related `UI_SPEC.md` document. If this module defines a data schema, see the related `ARCH_DATA_SCHEMA.md` document.
+
 ### Scope
 
 **In scope**:

@@ -17,6 +17,8 @@ HOW TO CUSTOMIZE:
 8. Update the Interaction Rules section to match your team's workflow.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the UI Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — UI Agent
 
 **Model**: [AI_MODEL]

@@ -208,7 +208,76 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 
 5. **Commit the populated template** as part of your project's initial commit so that all contributors and agents share the same baseline context from the start.
 
-6. **Remove this README** from your project once the template has been fully populated, or repurpose it as a contributor guide scoped to your specific project.
+6. **Verify all placeholders are replaced** by searching for remaining tokens:
+
+   ```
+   grep -r '\[' --include='*.md' . | grep -v 'node_modules' | grep '\[.*\]'
+   ```
+
+   Any remaining `[PLACEHOLDER]` tokens indicate incomplete customization.
+
+7. **Remove this README** from your project once the template has been fully populated, or repurpose it as a contributor guide scoped to your specific project.
+
+---
+
+## Using with Claude Code
+
+### Session Initialization
+
+`root/CLAUDE.md` is automatically loaded from the project root at every session start. It provides the baseline context (project identity, build commands, conventions) that all agents need. To work as a specific agent, load the relevant agent file as additional context.
+
+### Agent Loading Patterns by Task Type
+
+| Task | Agent file to load |
+|---|---|
+| Define or update requirements | `agents/product.md` |
+| Design system architecture | `agents/architect.md` |
+| Design UI screens or components | `agents/ui.md` |
+| Implement features or fixes | `agents/coder.md` |
+| Review code quality | `agents/reviewer.md` |
+| Write or run tests | `agents/tester.md` |
+| Investigate a bug | `agents/debugger.md` |
+| File a bug report | `agents/bug-gatherer.md` |
+| Refactor code structure | `agents/refactor.md` |
+| Update documentation | `agents/docs-writer.md` |
+| Evaluate UX flows | `agents/ux-critic.md` |
+| Audit for security issues | `agents/security.md` |
+| Profile performance | `agents/performance.md` |
+| Prepare a release | `agents/release.md` |
+| Produce visual assets | `agents/asset-gen.md` |
+| Enforce process and resolve conflicts | `agents/validator.md` |
+
+### Inter-Agent Handoff
+
+Agents communicate through shared documents. When one agent completes work, the next agent reads the updated files:
+
+- **Current Work tables** in each agent file track in-progress and completed tasks.
+- **`docs/BUGS.md`** is the shared bug tracker (Bug Gatherer files, Debugger investigates, Coder fixes).
+- **Architecture documents** (`docs/ARCH_MODULE.md`, `docs/ARCH_DATA_SCHEMA.md`) are the contract between Architecture and Coder.
+- **UI specifications** (`docs/UI_SPEC.md`) are the contract between UI and Coder.
+
+### Minimum Viable Agent Set
+
+These agents form the core development loop and are recommended for all projects:
+- **Product** — Requirements and acceptance criteria
+- **Coder** — Implementation
+- **Reviewer** — Code quality
+- **Tester** — Test coverage
+
+Strongly recommended additions:
+- **Architect** — For projects with multiple modules or complex structure
+- **Debugger** — For projects with non-trivial bug investigation needs
+- **Docs Writer** — For projects requiring documentation maintenance
+
+Optional based on project type:
+- **Security** — Security-critical applications
+- **Performance** — Performance-sensitive applications
+- **UX Critic** — User-facing applications with complex flows
+- **Asset Gen** — Projects requiring visual asset production
+- **Release** — Projects with formal release processes
+- **Refactor** — Projects with technical debt concerns
+- **Bug Gatherer** — Projects with external bug reporters
+- **Validator** — Large teams or complex multi-agent workflows
 
 ---
 

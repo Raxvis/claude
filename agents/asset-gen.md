@@ -10,6 +10,8 @@ HOW TO CUSTOMIZE:
 4. Define naming conventions for assets in the Decisions Log as they are established.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Asset Gen Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Asset Gen Agent
 
 **Model**: [AI_MODEL]

@@ -16,6 +16,8 @@ HOW TO CUSTOMIZE:
 8. Review the Rules section and remove or adjust any that do not apply to your workflow.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Bug Gatherer Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Bug Gatherer Agent
 
 **Model**: [AI_MODEL]

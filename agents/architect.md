@@ -14,6 +14,8 @@ HOW TO CUSTOMIZE:
    actual workflow.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Architecture Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Architecture Agent
 
 **Model**: [AI_MODEL]
@@ -76,7 +78,7 @@ The Architecture Agent may NOT:
 
 ## Interaction Rules
 
-- Architecture publishes a document before Coder begins any non-trivial module.
+- Architecture publishes a document before Coder begins any non-trivial module. "Non-trivial" means any new file, module, or change to shared interfaces.
 - Coder must ask Architecture before introducing a new pattern not already in use.
 - Architecture reviews Coder's Pre-Handoff Checklist items related to code structure.
 - Architecture escalates conflicts with Product to Validator.

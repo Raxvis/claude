@@ -10,6 +10,8 @@ HOW TO CUSTOMIZE:
 4. Update the Inputs table if your project has additional release prerequisites.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Release Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Release Agent
 
 **Model**: [AI_MODEL]

@@ -1,69 +1,13 @@
 <!-- TEMPLATE INSTRUCTIONS
   FILE: CLAUDE.md (placed at project root)
-  PURPOSE: Provides an AI coding assistant with persistent context about the project: what
-           it is, how it is structured, what conventions to follow, and how to build and
-           test it.
+  PURPOSE: Provides an AI coding assistant with persistent context about the project.
 
   HOW TO CUSTOMIZE:
-  - Replace every [PLACEHOLDER] token with the actual project-specific value.
-  - Remove placeholder text and comments that no longer apply after filling in.
-  - Delete entire sections that are not relevant to your project.
-  - Expand any section with additional project-specific details as needed.
-  - Keep code examples in the style and syntax of your actual [LANGUAGE].
-  - Update the Memory Imports section to point to the docs that exist in your repo.
-
-  PLACEHOLDER LEGEND:
-  The authoritative placeholder reference is in README.md at the repository root.
-  This legend covers placeholders used in this file. See README.md for the full set.
-
-  [PROJECT_NAME]          — The name of the project (e.g. "My App")
-  [PROJECT_TYPE]          — What kind of product it is (e.g. "cross-platform mobile game",
-                            "SaaS web application", "CLI tool")
-  [FRAMEWORK]             — The primary framework (e.g. "Next.js", "Flutter", "Rails")
-  [FRAMEWORK_VERSION]     — Framework version (e.g. "v14", "SDK 52")
-  [LANGUAGE]              — Programming language (e.g. "TypeScript", "Dart", "Ruby")
-  [STATE_LIBRARY]         — State management solution (e.g. "Redux", "Riverpod", "MobX")
-  [STATE_LIBRARY_VERSION] — Version of the state library
-  [PERSISTENCE_LAYER]     — How data is persisted locally (e.g. "SQLite", "IndexedDB",
-                            "SharedPreferences")
-  [NAVIGATION_LIBRARY]    — Routing/navigation solution (e.g. "React Router", "GoRouter")
-  [TARGET_PLATFORMS]      — Deployment targets (e.g. "iOS, Android, Web")
-  [DEV_SERVER_CMD]        — Command to start the dev server (e.g. "npm start", "flutter run")
-  [TYPE_CHECK_CMD]        — Command to run the type checker (e.g. "npx tsc --noEmit")
-  [TEST_CMD]              — Command to run the test suite (e.g. "npm test", "flutter test")
-  [BUILD_CMD]             — Command to produce a production build
-  [PKG_MANAGER]           — Package/dependency manager (e.g. "npm", "pub", "bundler")
-  [PKG_ADD_CMD]           — How to add a new dependency (e.g. "npm install", "flutter pub add")
-  [SAVE_KEY]              — Storage key for persisted data (e.g. "my_app_data_v1")
-  [SAVE_VERSION]          — Current save format version number (e.g. "1")
-  [SCREEN_DIR]            — Directory where screen/page files live (e.g. "app/", "pages/")
-  [LOGIC_DIR]             — Directory for pure business logic (e.g. "src/game/", "lib/domain/")
-  [STORE_DIR]             — Directory for state management files (e.g. "src/store/")
-  [COMPONENTS_DIR]        — Directory for UI components (e.g. "src/components/")
-  [HOOKS_DIR]             — Directory for reusable hooks/providers (e.g. "src/hooks/")
-  [CONSTANTS_DIR]         — Directory for constants and config (e.g. "src/constants/")
-  [ASSETS_DIR]            — Directory for static assets (e.g. "assets/")
-  [EXT]                   — File extension for source files (e.g. "tsx", "dart", "rb")
-  [MAIN_SCREEN]           — Core feature screen file name (e.g. "game", "dashboard")
-  [FRAMEWORK_CONFIG]      — Framework configuration file (e.g. "app.json", "pubspec.yaml")
-  [PKG_MANIFEST]          — Package/dependency manifest file (e.g. "package.json")
-  [TYPE_CONFIG]           — Type checker configuration file (e.g. "tsconfig.json")
-  [BUNDLER_CONFIG]        — Bundler/build configuration file (e.g. "metro.config.js",
-                            "webpack.config.js")
-  [LOWER_CASE_CONVENTION] — Naming convention for lowercase identifiers (e.g. "camelCase",
-                            "snake_case")
-  [PASCAL_CASE_CONVENTION] — Naming convention for type-level identifiers (e.g. "PascalCase")
-  [UPPER_SNAKE_CONVENTION] — Naming convention for constants (e.g. "UPPER_SNAKE_CASE",
-                             "SCREAMING_SNAKE_CASE")
-  [INPUT_METHOD]          — Primary input method (e.g. "touch", "mouse", "keyboard")
-  [MIN_TOUCH_TARGET]      — Minimum interactive element size (e.g. "44×44pt", "48dp")
-  [OTHER_DEP_1]           — Additional project dependency (replace with actual package name)
-  [OTHER_DEP_2]           — Additional project dependency (replace with actual package name)
-  [TARGET_PLATFORM_1]     — First platform for Build & Test section (e.g. "iOS simulator")
-  [TARGET_PLATFORM_2]     — Second platform for Build & Test section (e.g. "Android emulator")
-  [TARGET_PLATFORM_3]     — Third platform for Build & Test section (e.g. "web browser")
-
-  After filling in the template, delete this entire comment block before committing.
+  - Replace every [PLACEHOLDER] token with project-specific values.
+  - See README.md for the full placeholder reference table.
+  - Delete sections not relevant to your project.
+  - Update Memory Imports to match your actual docs.
+  - Delete this comment block before committing.
 -->
 
 # [PROJECT_NAME] - CLAUDE.md
@@ -71,6 +15,36 @@
 ## Project Overview
 
 [PROJECT_NAME] is a [PROJECT_TYPE] built with **[FRAMEWORK] ([FRAMEWORK_VERSION])**. Targets **[TARGET_PLATFORMS]**.
+
+## Tech Stack
+
+- **Framework**: [FRAMEWORK] ([FRAMEWORK_VERSION])
+- **Language**: [LANGUAGE] (strict mode)
+- **Navigation**: [NAVIGATION_LIBRARY] (file-based, stack navigator)
+- **State Management**: [STATE_LIBRARY] ([STATE_LIBRARY_VERSION])
+- **Persistence**: [PERSISTENCE_LAYER]
+- **Platforms**: [TARGET_PLATFORMS]
+- **Build**: `[DEV_SERVER_CMD]` (dev) / `[BUILD_CMD]` (production)
+
+## Build & Test
+
+- **Dev server**: `[DEV_SERVER_CMD]`
+  - Open in [TARGET_PLATFORM_1]
+  - Open in [TARGET_PLATFORM_2]
+  - Open in [TARGET_PLATFORM_3]
+- **Type check**: `[TYPE_CHECK_CMD]`
+- **Tests**: `[TEST_CMD]`
+- **Production build**: `[BUILD_CMD]`
+- **Debug**: Use [FRAMEWORK] DevTools / dev menu, or runtime logging
+- **Hot reload**: [FRAMEWORK] supports fast refresh for instant iteration
+
+## Common Pitfalls
+
+- **[STATE_LIBRARY] selectors**: Always use selector functions — never subscribe to the entire store root, which triggers re-renders on every state change.
+- **Effect cleanup**: Always return a cleanup function from lifecycle effects that set up intervals or event listeners to prevent memory leaks.
+- **Safe area**: Always account for system UI insets — device notches and status bars require padding adjustments.
+- **Platform API gaps**: Some framework APIs may not be available on all target platforms. Use platform conditional guards where needed.
+- **[NAVIGATION_LIBRARY] routing**: Screen files must live in `[SCREEN_DIR]`. The layout file configures the navigator for that directory.
 
 ## Project Structure
 
@@ -95,16 +69,6 @@
   [TYPE_CONFIG]                   # [LANGUAGE] config (strict mode, path aliases)
   [BUNDLER_CONFIG]                # Bundler/build config
 ```
-
-## Tech Stack
-
-- **Framework**: [FRAMEWORK] ([FRAMEWORK_VERSION])
-- **Language**: [LANGUAGE] (strict mode)
-- **Navigation**: [NAVIGATION_LIBRARY] (file-based, stack navigator)
-- **State Management**: [STATE_LIBRARY] ([STATE_LIBRARY_VERSION])
-- **Persistence**: [PERSISTENCE_LAYER]
-- **Platforms**: [TARGET_PLATFORMS]
-- **Build**: `[DEV_SERVER_CMD]` (dev) / `[BUILD_CMD]` (production)
 
 ## [LANGUAGE] Style Conventions
 
@@ -231,6 +195,8 @@ Data is persisted via [PERSISTENCE_LAYER] using the key `[SAVE_KEY]`.
 
 ## Performance
 
+_This section applies to user-facing applications (mobile, web, desktop). For CLI tools or backend services, delete this section._
+
 - **Scrolling lists**: Use virtualized list components; implement stable key extraction and memoized render functions
 - **Re-renders**: Fine-grained [STATE_LIBRARY] selectors prevent unnecessary re-renders
 - **Images**: Use appropriate resizing and consider a caching-aware image component
@@ -241,6 +207,8 @@ Data is persisted via [PERSISTENCE_LAYER] using the key `[SAVE_KEY]`.
 - **Memory**: Avoid storing large derived arrays in state; prefer computed selectors
 
 ## Input Handling
+
+_This section applies to user-facing applications (mobile, web, desktop). For CLI tools or backend services, delete this section._
 
 [INPUT_METHOD]-based interaction. Use the framework's recommended pressable primitive for all interactive elements:
 
@@ -283,26 +251,6 @@ Current dependencies (see `[PKG_MANIFEST]`):
 - **[OTHER_DEP_1]** — [description]
 - **[OTHER_DEP_2]** — [description]
 
-## Common Pitfalls
-
-- **[STATE_LIBRARY] selectors**: Always use selector functions — never subscribe to the entire store root, which triggers re-renders on every state change.
-- **Effect cleanup**: Always return a cleanup function from lifecycle effects that set up intervals or event listeners to prevent memory leaks.
-- **Safe area**: Always account for system UI insets — device notches and status bars require padding adjustments.
-- **Platform API gaps**: Some framework APIs may not be available on all target platforms. Use platform conditional guards where needed.
-- **[NAVIGATION_LIBRARY] routing**: Screen files must live in `[SCREEN_DIR]`. The layout file configures the navigator for that directory.
-
-## Build & Test
-
-- **Dev server**: `[DEV_SERVER_CMD]`
-  - Open in [TARGET_PLATFORM_1]
-  - Open in [TARGET_PLATFORM_2]
-  - Open in [TARGET_PLATFORM_3]
-- **Type check**: `[TYPE_CHECK_CMD]`
-- **Tests**: `[TEST_CMD]`
-- **Production build**: `[BUILD_CMD]`
-- **Debug**: Use [FRAMEWORK] DevTools / dev menu, or runtime logging
-- **Hot reload**: [FRAMEWORK] supports fast refresh for instant iteration
-
 ## File Naming
 
 - [LOWER_CASE_CONVENTION] for source files: `[example-module].[EXT]`, `[example-store].[EXT]`
@@ -320,11 +268,20 @@ Current dependencies (see `[PKG_MANIFEST]`):
 
 ## Memory Imports
 
-<!-- These are the core context documents loaded at session start. Other docs/ files
-     (GLOSSARY.md, BUGS.md, CHANGELOG.md, architecture templates, etc.) are referenced
-     on demand. Add or remove imports based on which documents your agents need upfront. -->
+These documents are loaded into Claude Code's context at every session start.
+They provide the baseline context all agents need. Customize based on your
+project's needs — add docs your agents frequently reference, remove any that
+don't apply.
+
+<!-- Core context: documentation index, requirements, coding patterns, file rules, error handling -->
 @import docs/README.md
 @import docs/PRD.md
+@import docs/CODE_PATTERNS.md
+@import docs/FILE_CONVENTIONS.md
+@import docs/ERROR_HANDLING.md
+
+<!-- Consider adding once they contain real project content:
 @import docs/CONCEPT.md
 @import docs/ADDITIONAL.md
-@import docs/FILE_CONVENTIONS.md
+@import docs/GLOSSARY.md
+-->

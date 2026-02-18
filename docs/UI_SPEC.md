@@ -32,6 +32,8 @@
 
 [Describe what this component or screen does, when it is shown, and why it exists. 2–4 sentences.]
 
+**Related documents:** This screen's data comes from `[MODULE_NAME]` (see `ARCH_MODULE.md`). If this screen uses a specific data schema, see the related `ARCH_DATA_SCHEMA.md` document.
+
 ---
 
 ## Position

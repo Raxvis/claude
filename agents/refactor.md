@@ -10,6 +10,8 @@ HOW TO CUSTOMIZE:
 4. Update the Current Work table columns to match your project's tracking needs.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Refactor Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Refactor Agent
 
 **Model**: [AI_MODEL]
@@ -77,6 +79,7 @@ The Refactor Agent may NOT:
 
 - Refactor is triggered by Reviewer, Tester, or direct user invocation — it does not self-activate.
 - **After every refactoring change, Refactor hands off to Tester and Reviewer.** This is mandatory — no refactored code is considered complete until Tester confirms all tests pass and Reviewer confirms quality standards are met. This loop repeats until both Tester and Reviewer approve.
+- **Failure mode recovery:** If the Tester/Reviewer loop does not converge after 3 iterations, Refactor escalates to Architecture for structural guidance. If Tester and Reviewer disagree (one approves, the other rejects), Validator applies the standard conflict resolution process.
 - If a refactoring would change a public interface, Refactor must get Architecture approval first.
 - Refactor coordinates with Coder when changes affect modules Coder is actively working on.
 

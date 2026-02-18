@@ -17,6 +17,8 @@ HOW TO CUSTOMIZE:
    project's threshold values.
 -->
 
+> **Agent Activation:** When this file is loaded as context, you are operating as the Validator Agent. Follow all instructions below as your role definition.
+
 # [PROJECT_NAME] — Validator Agent
 
 **Model**: [AI_MODEL]

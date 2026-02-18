@@ -32,6 +32,8 @@
 
 [Describe what data this schema represents, what it is used for, and why it is structured this way. 2–4 sentences.]
 
+**Related documents:** See `ARCH_MODULE.md` for the module that owns this schema. If this data is displayed in a UI, see the related `UI_SPEC.md` document.
+
 ### Format
 
 [Describe the serialization format — e.g., structured text, binary, key-value pairs — and why it was chosen.]
