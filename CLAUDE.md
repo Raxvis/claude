@@ -14,7 +14,7 @@ This is a **multi-agent AI-assisted development workflow template**. It contains
 
 ## Placeholder Convention
 
-All project-specific content uses `[UPPER_SNAKE_CASE]` tokens in square brackets. Categories: Identity (`[PROJECT_NAME]`, `[PROJECT_TYPE]`), Tech (`[FRAMEWORK]`, `[LANGUAGE]`), Commands (`[DEV_SERVER_CMD]`, `[TEST_CMD]`), Domain (`[DOMAIN_ENTITY]`, `[CORE_MECHANIC]`), Platform (`[TARGET_PLATFORMS]`), Agents (`[AI_MODEL]`).
+All project-specific content uses `[UPPER_SNAKE_CASE]` tokens in square brackets. Categories: Identity (`[PROJECT_NAME]`, `[PROJECT_TYPE]`), Tech (`[FRAMEWORK]`, `[LANGUAGE]`), Commands (`[DEV_SERVER_CMD]`, `[TEST_CMD]`), Domain (`[DOMAIN_ENTITY]`, `[CORE_MECHANIC]`), Platform (`[TARGET_PLATFORMS]`), Project Structure (`[SCREEN_DIR]`, `[LOGIC_DIR]`), Conventions (`[LOWER_CASE_CONVENTION]`), Persistence (`[SAVE_KEY]`), Testing (`[COVERAGE_TARGET]`), Performance (`[STARTUP_METRIC]`), Process (`[MAX_AGE_DAYS]`), Agents (`[AI_MODEL]`).
 
 When editing templates, preserve placeholder tokens — do not replace them with concrete values unless adapting the template for a specific project.
 

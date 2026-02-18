@@ -80,10 +80,20 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 | Placeholder | Description | Example value |
 |---|---|---|
 | `[FRAMEWORK]` | Primary application framework | any client or server framework |
+| `[FRAMEWORK_VERSION]` | Framework version | v14, SDK 52 |
 | `[LANGUAGE]` | Primary programming language | any typed or untyped language |
 | `[STATE_LIBRARY]` | Client-side or application-level state management library | any state management solution |
+| `[STATE_LIBRARY_VERSION]` | Version of the state management library | 4.x, 2.0 |
 | `[PERSISTENCE_LAYER]` | Storage mechanism for application data | any database, file store, or cache |
+| `[NAVIGATION_LIBRARY]` | Routing or navigation solution | React Router, GoRouter |
 | `[TEST_RUNNER]` | Tool used to execute automated tests | any test runner or framework |
+| `[PKG_MANAGER]` | Package or dependency manager | npm, pub, bundler |
+| `[PKG_ADD_CMD]` | Command to add a new dependency | npm install, flutter pub add |
+| `[PKG_MANIFEST]` | Package or dependency manifest file | package.json, pubspec.yaml |
+| `[FRAMEWORK_CONFIG]` | Framework configuration file | app.json, next.config.js |
+| `[TYPE_CONFIG]` | Type checker configuration file | tsconfig.json |
+| `[BUNDLER_CONFIG]` | Bundler or build configuration file | metro.config.js, webpack.config.js |
+| `[EXT]` | File extension for source files | tsx, dart, rb |
 
 ### Commands
 
@@ -103,6 +113,34 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 | `[CORE_MECHANIC]` | The central user-facing action or loop in the application | placing a bid, scheduling a shift, publishing a report |
 | `[PROGRESSION_UNIT]` | The measure of progress or achievement that users accumulate | points, completed milestones, unlocked tiers |
 
+### Project Structure
+
+| Placeholder | Description | Example value |
+|---|---|---|
+| `[SCREEN_DIR]` | Directory where screen or page files live | app/, pages/ |
+| `[LOGIC_DIR]` | Directory for pure business logic | src/game/, lib/domain/ |
+| `[STORE_DIR]` | Directory for state management files | src/store/ |
+| `[COMPONENTS_DIR]` | Directory for UI components | src/components/ |
+| `[HOOKS_DIR]` | Directory for reusable hooks or providers | src/hooks/ |
+| `[CONSTANTS_DIR]` | Directory for constants and configuration | src/constants/ |
+| `[ASSETS_DIR]` | Directory for static assets | assets/ |
+| `[MAIN_SCREEN]` | Core feature screen file name | game, dashboard |
+
+### Conventions
+
+| Placeholder | Description | Example value |
+|---|---|---|
+| `[LOWER_CASE_CONVENTION]` | Naming convention for variables, functions, and file names | camelCase, snake_case |
+| `[PASCAL_CASE_CONVENTION]` | Naming convention for types, interfaces, and components | PascalCase |
+| `[UPPER_SNAKE_CONVENTION]` | Naming convention for module-level constants | UPPER_SNAKE_CASE |
+
+### Persistence
+
+| Placeholder | Description | Example value |
+|---|---|---|
+| `[SAVE_KEY]` | Storage key for persisted data | my_app_data_v1 |
+| `[SAVE_VERSION]` | Current save format version number | 1 |
+
 ### Platform
 
 | Placeholder | Description | Example value |
@@ -110,8 +148,14 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 | `[TARGET_PLATFORMS]` | Comma-separated list of deployment targets | web, iOS, Android, desktop |
 | `[PLATFORM_1]` | Primary target platform name | iOS |
 | `[PLATFORM_2]` | Secondary target platform name | Android |
+| `[TARGET_PLATFORM_1]` | First platform for Build & Test instructions | iOS simulator |
+| `[TARGET_PLATFORM_2]` | Second platform for Build & Test instructions | Android emulator |
+| `[TARGET_PLATFORM_3]` | Third platform for Build & Test instructions | web browser |
+| `[INPUT_METHOD]` | Primary input method | touch, mouse, keyboard |
 | `[MIN_TOUCH_TARGET]` | Minimum interactive element size for touch interfaces | any size specification in platform units |
 | `[THEME_FILE_PATH]` | Relative path from the project root to the theme or design-token file | path to the project's theme constants |
+| `[OTHER_DEP_1]` | Additional project dependency | any package name |
+| `[OTHER_DEP_2]` | Additional project dependency | any package name |
 
 ### Testing
 

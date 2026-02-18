@@ -13,6 +13,8 @@ HOW TO CUSTOMIZE:
    keep it intact and rename the section headers to match milestone names as they complete.
 7. The Automation Scripts section is a placeholder — fill in any scripts or tools your team
    uses to automate validation checks (e.g., linting, type checking, test runners).
+8. Replace [MAX_AGE_DAYS], [MAX_BLOCKED_DAYS], and [CRITICAL_BLOCKED_DAYS] with your
+   project's threshold values.
 -->
 
 # [PROJECT_NAME] — Validator Agent
@@ -90,6 +92,14 @@ The Validator Agent may NOT:
 
 ---
 
+## Decisions Log
+
+| Date | Decision | Rationale | Impact |
+|---|---|---|---|
+| _(empty)_ | | | |
+
+---
+
 ## Session-Start Checklist
 
 _Run at the beginning of every working session._
@@ -97,7 +107,7 @@ _Run at the beginning of every working session._
 - [ ] Review the Agent Status Dashboard — confirm no agents are in a blocked state.
 - [ ] Confirm the current milestone is clearly defined in Product's file.
 - [ ] Confirm Coder's Work Queue has at least one task that is "Ready to Start".
-- [ ] Confirm no unresolved conflicts are more than [MAX_AGE_DAYS, e.g., 3 days] old (use the Date column in the Conflicts table).
+- [ ] Confirm no unresolved conflicts are more than [MAX_AGE_DAYS] old (use the Date column in the Conflicts table).
 - [ ] Review the Open Questions Tracker — confirm no questions have been pending for more than 2 sessions.
 - [ ] Review the Process Violations log — confirm all violations have a resolution or owner.
 - [ ] Confirm Architecture has an Approved document for every module Coder will touch this session.
@@ -296,11 +306,11 @@ When an agent is in a blocked state (as shown in the Agent Status Dashboard):
 
 1. **Immediate**: Validator identifies the blocking agent and confirms the blocker is real (not stale).
 2. **Same session**: Validator notifies the blocking agent and requests a timeline for resolution.
-3. **After [MAX_BLOCKED_DAYS, e.g., 3 days]**: Validator escalates:
+3. **After [MAX_BLOCKED_DAYS]**: Validator escalates:
    - If the blocker can be reassigned, Validator reassigns to another agent or decomposes the blocking task.
    - If the blocker requires a decision, Validator calls for a focused resolution session with the relevant agents.
    - If the blocker is external (infrastructure, dependency, stakeholder decision), Validator logs it and notifies a human stakeholder.
-4. **After [CRITICAL_BLOCKED_DAYS, e.g., 5 days]**: Validator pauses related milestone work and escalates to a human stakeholder with a written summary of the blocker, its impact, and recommended resolution.
+4. **After [CRITICAL_BLOCKED_DAYS]**: Validator pauses related milestone work and escalates to a human stakeholder with a written summary of the blocker, its impact, and recommended resolution.
 
 ---
 

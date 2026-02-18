@@ -1,22 +1,18 @@
 <!-- TEMPLATE INSTRUCTIONS
-=========================
-This is a template CLAUDE.md for AI assistant project instructions.
+  FILE: CLAUDE.md (placed at project root)
+  PURPOSE: Provides an AI coding assistant with persistent context about the project: what
+           it is, how it is structured, what conventions to follow, and how to build and
+           test it.
 
-PURPOSE:
-  CLAUDE.md is placed at the root of a project repository. It provides an AI coding
-  assistant with persistent context about the project: what it is, how it is structured,
-  what conventions to follow, and how to build and test it.
+  HOW TO CUSTOMIZE:
+  - Replace every [PLACEHOLDER] token with the actual project-specific value.
+  - Remove placeholder text and comments that no longer apply after filling in.
+  - Delete entire sections that are not relevant to your project.
+  - Expand any section with additional project-specific details as needed.
+  - Keep code examples in the style and syntax of your actual [LANGUAGE].
+  - Update the Memory Imports section to point to the docs that exist in your repo.
 
-HOW TO FILL IN THIS TEMPLATE:
-  1. Replace every [PLACEHOLDER] token with the actual project-specific value.
-  2. Remove placeholder text and comments that no longer apply after filling in.
-  3. Delete entire sections that are not relevant to your project (e.g. if your project
-     has no progression/prestige system, remove that subsection).
-  4. Expand any section with additional project-specific details as needed.
-  5. Keep code examples in the style and syntax of your actual [LANGUAGE].
-  6. Update the Memory Imports section to point to the docs that exist in your repo.
-
-PLACEHOLDER LEGEND:
+  PLACEHOLDER LEGEND:
   The authoritative placeholder reference is in README.md at the repository root.
   This legend covers placeholders used in this file. See README.md for the full set.
 
@@ -67,8 +63,7 @@ PLACEHOLDER LEGEND:
   [TARGET_PLATFORM_2]     — Second platform for Build & Test section (e.g. "Android emulator")
   [TARGET_PLATFORM_3]     — Third platform for Build & Test section (e.g. "web browser")
 
-After filling in the template, delete this entire comment block before committing.
-=========================
+  After filling in the template, delete this entire comment block before committing.
 -->
 
 # [PROJECT_NAME] - CLAUDE.md
@@ -324,6 +319,10 @@ Current dependencies (see `[PKG_MANIFEST]`):
   ```
 
 ## Memory Imports
+
+<!-- These are the core context documents loaded at session start. Other docs/ files
+     (GLOSSARY.md, BUGS.md, CHANGELOG.md, architecture templates, etc.) are referenced
+     on demand. Add or remove imports based on which documents your agents need upfront. -->
 @import docs/README.md
 @import docs/PRD.md
 @import docs/CONCEPT.md

@@ -57,7 +57,7 @@ These documents track the live state of the project: bugs, progress, and milesto
 | `ASSETS.md` | Registry of all project assets (images, fonts, etc.) with status and source information. |
 | `MVP_LAUNCH.md` | Checklist and criteria for the initial public release. |
 | `STANDUP.md` | Running log of progress updates, blockers, and decisions from work sessions. |
-| `MILESTONE_VALIDATION.md` | Template for milestone acceptance records. Copy to `docs/milestones/` for each milestone. |
+| `MILESTONE_VALIDATION.md` | Template for milestone acceptance records. Copy to `docs/milestones/[MILESTONE_NAME]_VALIDATION.md` for each milestone. |
 
 ---
 
@@ -72,7 +72,7 @@ systems, data schemas, UI screens, or task breakdowns.
 | `ARCH_SYSTEM.md` | Template for documenting a high-level system composed of multiple modules. |
 | `ARCH_DATA_SCHEMA.md` | Template for documenting a data schema or save format. |
 | `UI_SPEC.md` | Template for specifying a UI screen or component (layout, states, interactions, accessibility). |
-| `MILESTONE_TASKS.md` | Template for breaking a milestone into concrete, actionable tasks with acceptance criteria. Copy to `docs/milestones/` for each milestone. |
+| `MILESTONE_TASKS.md` | Template for breaking a milestone into concrete, actionable tasks with acceptance criteria. Copy to `docs/milestones/[MILESTONE_NAME]_TASKS.md` for each milestone. |
 | `MILESTONE_COMPLETION.md` | Template for milestone completion reports. Copy to `docs/milestones/` after a milestone is validated. |
 
 ---
