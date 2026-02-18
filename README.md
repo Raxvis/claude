@@ -30,7 +30,7 @@ The system is:
 ## Directory Structure
 
 ```
-template/
+claude/
   README.md              # This file — master index and usage guide
   root/                  # Files intended for the project root
   agents/                # Agent role definition files
@@ -125,7 +125,7 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 1. **Copy the template directory** into the root of your new project repository:
 
    ```
-   cp -r template/ /path/to/your-new-project/template/
+   cp -r claude/ /path/to/your-new-project/
    ```
 
 2. **Search for every placeholder** across all files and replace each one with the appropriate project-specific value. Process the placeholder categories in order: Identity first, then Tech, then Commands, then Domain, then Platform, then Agents.
