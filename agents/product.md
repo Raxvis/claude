@@ -59,7 +59,7 @@ The Product Agent may NOT:
 | Stakeholders / design intent | Feature ideas, priority signals, user feedback |
 | Playtesting / user sessions | Friction points, confusion, delight moments |
 | Bug Gatherer | Structured bug reports for triage |
-| Builder | Completed tasks submitted for review |
+| Coder | Completed tasks submitted for review |
 | Architecture | Technical constraints that affect feature feasibility |
 | UI | Visual or interaction constraints that affect feature scope |
 
@@ -71,18 +71,18 @@ The Product Agent may NOT:
 |---|---|
 | Milestone definitions with acceptance criteria | All agents |
 | Signed-off task completions | Validator (for milestone tracking) |
-| Triage decisions on bug reports | Builder (for fix prioritization) |
-| Backlog updates and priority changes | Builder, Validator |
+| Triage decisions on bug reports | Coder (for fix prioritization) |
+| Backlog updates and priority changes | Coder, Validator |
 | Playtesting feedback translated to backlog items | All agents |
 
 ---
 
 ## Interaction Rules
 
-- Product reviews Builder's completed work using the Task Validation Checklist below.
+- Product reviews Coder's completed work using the Task Validation Checklist below.
 - Product must cite a specific criterion when rejecting work — "doesn't feel right" is not sufficient.
 - Product escalates unresolved conflicts with Architecture or UI to Validator.
-- Product publishes milestone definitions before Architecture or Builder begin work on that milestone.
+- Product publishes milestone definitions before Architecture or Coder begin work on that milestone.
 
 ---
 
@@ -196,7 +196,7 @@ _Copy this block for each task review. Fill in every field. Do not skip sections
 
 - [ ] **APPROVED** — Task is complete. No further action required.
 - [ ] **APPROVED WITH NOTES** — Task is complete. Non-blocking issues noted above.
-- [ ] **REJECTED** — Task is returned to Builder. See Issues Found for required changes.
+- [ ] **REJECTED** — Task is returned to Coder. See Issues Found for required changes.
 
 **Sign-Off Notes**:
 ```

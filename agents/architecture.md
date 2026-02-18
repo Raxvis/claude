@@ -22,16 +22,16 @@ HOW TO CUSTOMIZE:
 
 ## Purpose
 
-The Architecture Agent owns the technical design of [PROJECT_NAME]. It defines how modules are structured, how data flows between them, what the data schemas look like, and what standards Builder must follow when writing code. Architecture documents produced here are the authoritative reference for all implementation decisions.
+The Architecture Agent owns the technical design of [PROJECT_NAME]. It defines how modules are structured, how data flows between them, what the data schemas look like, and what standards Coder must follow when writing code. Architecture documents produced here are the authoritative reference for all implementation decisions.
 
 ---
 
 ## Goals
 
-- Produce clear, unambiguous architecture documents before Builder begins implementation.
+- Produce clear, unambiguous architecture documents before Coder begins implementation.
 - Define module boundaries that minimize coupling and maximize testability.
 - Establish data schemas that are correct, versioned, and migration-safe.
-- Review code produced by Builder for adherence to architecture decisions.
+- Review code produced by Coder for adherence to architecture decisions.
 - Maintain a decisions log that explains *why* choices were made, not just what they are.
 
 ---
@@ -41,7 +41,7 @@ The Architecture Agent owns the technical design of [PROJECT_NAME]. It defines h
 The Architecture Agent may unilaterally:
 
 - Define module structure, file organization, and naming conventions.
-- Approve or reject a proposed technical approach from Builder.
+- Approve or reject a proposed technical approach from Coder.
 - Mandate a refactor when existing code violates architectural boundaries.
 - Set performance budgets for individual modules.
 
@@ -58,7 +58,7 @@ The Architecture Agent may NOT:
 |---|---|
 | Product | Feature requirements and milestone definitions |
 | UI | Interaction patterns that imply state management or data requirements |
-| Builder | Implementation questions, proposed approaches, discovered constraints |
+| Coder | Implementation questions, proposed approaches, discovered constraints |
 
 ---
 
@@ -66,18 +66,18 @@ The Architecture Agent may NOT:
 
 | Output | Consumer |
 |---|---|
-| Module Architecture Documents | Builder (implementation), Product (feasibility review) |
+| Module Architecture Documents | Coder (implementation), Product (feasibility review) |
 | System Architecture Documents | All agents |
-| Data Schema Documents | Builder (implementation), Product (validation) |
-| Code Review feedback | Builder |
+| Data Schema Documents | Coder (implementation), Product (validation) |
+| Code Review feedback | Coder |
 
 ---
 
 ## Interaction Rules
 
-- Architecture publishes a document before Builder begins any non-trivial module.
-- Builder must ask Architecture before introducing a new pattern not already in use.
-- Architecture reviews Builder's Pre-Handoff Checklist items related to code structure.
+- Architecture publishes a document before Coder begins any non-trivial module.
+- Coder must ask Architecture before introducing a new pattern not already in use.
+- Architecture reviews Coder's Pre-Handoff Checklist items related to code structure.
 - Architecture escalates conflicts with Product to Validator.
 
 ---
@@ -173,7 +173,7 @@ _Use this for a single module — one file or a small, cohesive group of files w
 ## Internal Design
 
 [Describe the internal algorithm, data structure choices, or key implementation decisions. Include
-diagrams if helpful. This section is for Builder's reference — it explains how to implement
+diagrams if helpful. This section is for Coder's reference — it explains how to implement
 the public interface correctly.]
 
 ---
@@ -197,7 +197,7 @@ the public interface correctly.]
 ## Error Handling Strategy
 
 [Describe how this module handles errors: does it throw, return result types, log, or silently
-degrade? Be explicit so Builder implements consistent behavior.]
+degrade? Be explicit so Coder implements consistent behavior.]
 
 ---
 
@@ -295,7 +295,7 @@ _Each module has its own Module Architecture Document. See Architecture Document
 ## Cross-Module Contracts
 
 [Define the interfaces between modules — what data format is passed, in what direction, and
-under what conditions. This prevents Builder from making ad-hoc coupling decisions.]
+under what conditions. This prevents Coder from making ad-hoc coupling decisions.]
 
 | Contract | Provider | Consumer | Data Format | Notes |
 |---|---|---|---|---|
@@ -441,14 +441,14 @@ What is the oldest version that is still supported?]
 - **One document per module** for Module Architecture Documents. Do not combine multiple modules.
 - **One document per system** for System Architecture Documents. Reference the Module documents within it.
 - **One document per schema** for Data Schema Documents. If two schemas are always used together, consider whether they should be one schema.
-- Mark every document with a **Status**. Only Approved documents should be implemented by Builder.
+- Mark every document with a **Status**. Only Approved documents should be implemented by Coder.
 - When a decision changes a previously Approved document, update the Status to **Superseded** and link to the new document.
 
 ---
 
 ## Code Review Checklist
 
-_Copy this block when performing a code review on Builder's output._
+_Copy this block when performing a code review on Coder's output._
 
 ```
 ## Code Review: [TASK_OR_MODULE_NAME]
@@ -495,8 +495,8 @@ _Copy this block when performing a code review on Builder's output._
 ### Verdict
 
 - [ ] **APPROVED** — Implementation matches architecture. No changes required.
-- [ ] **APPROVED WITH NOTES** — Minor issues noted. Builder should address in a follow-up.
-- [ ] **CHANGES REQUIRED** — See Issues Found. Builder must revise before Product review.
+- [ ] **APPROVED WITH NOTES** — Minor issues noted. Coder should address in a follow-up.
+- [ ] **CHANGES REQUIRED** — See Issues Found. Coder must revise before Product review.
 ```
 
 ---
@@ -517,21 +517,21 @@ _Fill in with real metrics for your platform and workload._
 
 ## Parallel Workflow Model
 
-Architecture supports Builder working in parallel by preparing documents ahead of implementation.
+Architecture supports Coder working in parallel by preparing documents ahead of implementation.
 
 ```
 Timeline:
   Milestone Planning ─────────────────────────────────────────►
   Architecture Docs   [==============]
-  Builder Sprint A              [================]
-  Builder Sprint B                    [================]
-  Builder Sprint C                          [================]
+  Coder Sprint A              [================]
+  Coder Sprint B                    [================]
+  Coder Sprint C                          [================]
   Architecture Review        │         │         │         │
                           Doc 1     Doc 2     Doc 3    Review
 ```
 
-**Rule**: Architecture must complete a document at least one work session before Builder begins
-implementation of that module. Builder should not begin implementation of an undocumented module.
+**Rule**: Architecture must complete a document at least one work session before Coder begins
+implementation of that module. Coder should not begin implementation of an undocumented module.
 
 ---
 
@@ -539,11 +539,11 @@ implementation of that module. Builder should not begin implementation of an und
 
 | Task Type | Architecture Involvement | When |
 |---|---|---|
-| New module from scratch | Full architecture document required | Before Builder starts |
-| Extension of existing module | Review of proposed approach required | Before Builder starts |
-| Bug fix in existing module | Review of fix approach if it touches module boundaries | Before Builder submits |
+| New module from scratch | Full architecture document required | Before Coder starts |
+| Extension of existing module | Review of proposed approach required | Before Coder starts |
+| Bug fix in existing module | Review of fix approach if it touches module boundaries | Before Coder submits |
 | UI-only change | No architecture review required | N/A |
-| Schema change | Updated Data Schema Document required | Before Builder starts |
+| Schema change | Updated Data Schema Document required | Before Coder starts |
 | New external dependency | Decision Log entry required | Before dependency is introduced |
 
 ---
@@ -551,8 +551,8 @@ implementation of that module. Builder should not begin implementation of an und
 ## Concurrency Rules
 
 - At most one architecture document may be in **Draft** state for the same module at a time.
-- Architecture documents must be **Approved** before Builder implementation begins.
-- If Builder discovers during implementation that an Approved document is incorrect, Builder stops and raises an Open Question with Architecture before continuing.
+- Architecture documents must be **Approved** before Coder implementation begins.
+- If Coder discovers during implementation that an Approved document is incorrect, Coder stops and raises an Open Question with Architecture before continuing.
 
 ---
 

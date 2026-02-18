@@ -27,11 +27,11 @@ All agents run on **[AI_MODEL]**.
 | Agent | File | Role |
 |---|---|---|
 | Product | `product.md` | Owns requirements, validates completed tasks against acceptance criteria, maintains the feature backlog, and signs off on milestones. |
-| Architecture | `architecture.md` | Owns system design, module boundaries, data schemas, and code review standards. Produces architecture documents that Builder implements. |
-| UI | `ui.md` | Owns visual design, layout specifications, the style guide, and interaction patterns. Produces screen specs that Builder implements. |
-| Builder | `builder.md` | Implements features as directed by Product, Architecture, and UI. Writes all production code and performs pre-handoff self-review. |
+| Architecture | `architecture.md` | Owns system design, module boundaries, data schemas, and code review standards. Produces architecture documents that Coder implements. |
+| UI | `ui.md` | Owns visual design, layout specifications, the style guide, and interaction patterns. Produces screen specs that Coder implements. |
+| Coder | `coder.md` | Implements features as directed by Product, Architecture, and UI. Writes all production code and performs pre-handoff self-review. |
 | Validator | `validator.md` | Owns the process. Enforces agent protocols, resolves conflicts between agents, tracks milestone progress, and runs retrospectives. |
-| Bug Gatherer | `bug-gatherer.md` | Collects and structures bug reports from testers or stakeholders. Produces standardized reports that Product triages and Builder fixes. |
+| Bug Gatherer | `bug-gatherer.md` | Collects and structures bug reports from testers or stakeholders. Produces standardized reports that Product triages and Coder fixes. |
 
 ---
 
@@ -82,7 +82,7 @@ Every agent file follows this standard structure:
              └───────────────►│◄───────────────┘
                               ▼
                       ┌──────────────┐
-                      │   Builder    │
+                      │   Coder    │
                       │    Agent     │
                       └──────┬───────┘
                              │ completed work for review
@@ -107,7 +107,7 @@ Every agent file follows this standard structure:
 1. **Product** defines milestone goals and acceptance criteria.
 2. **Architecture** produces architecture documents for all new modules.
 3. **UI** produces screen specifications for all new interfaces.
-4. **Builder** implements features using the above documents as authoritative references.
+4. **Coder** implements features using the above documents as authoritative references.
 6. **Product** validates completed work against acceptance criteria.
 7. **Validator** runs a milestone retrospective.
 
@@ -115,14 +115,14 @@ Every agent file follows this standard structure:
 
 1. **Product** writes a task definition with acceptance criteria.
 2. **Architecture** and/or **UI** produce relevant specifications if not already available.
-3. **Builder** implements the task, completes the Pre-Handoff Checklist, and marks the task ready for review.
+3. **Coder** implements the task, completes the Pre-Handoff Checklist, and marks the task ready for review.
 4. **Product** reviews and signs off or returns with feedback.
 5. **Validator** records the outcome in the process log.
 
 ### Cross-Reference Rules
 
-- **Builder** must reference the relevant architecture document section for every module it touches.
-- **Builder** must reference the relevant UI spec section for every screen or component it implements.
+- **Coder** must reference the relevant architecture document section for every module it touches.
+- **Coder** must reference the relevant UI spec section for every screen or component it implements.
 - **Product** must reference a specific acceptance criterion when rejecting a task.
 - **Validator** must cite the specific rule that was violated when flagging a process violation.
 
@@ -132,7 +132,7 @@ At the start of every working session:
 
 1. **Validator** reviews the Agent Status Dashboard and confirms no agents are in a blocked state.
 2. **Product** confirms the current milestone and priority order.
-3. **Builder** selects the next unstarted task from the Work Queue.
+3. **Coder** selects the next unstarted task from the Work Queue.
 
 ---
 
@@ -160,7 +160,7 @@ Each agent file contains reusable templates:
 | System Architecture Doc | `architecture.md` |
 | Data Schema Doc | `architecture.md` |
 | Code Review Checklist | `architecture.md` |
-| Pre-Handoff Checklist | `builder.md` |
+| Pre-Handoff Checklist | `coder.md` |
 | UI Spec Template | `ui.md` |
 | UX Review Checklist | `ui.md` |
 | Milestone Retrospective | `validator.md` |

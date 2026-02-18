@@ -60,7 +60,7 @@ The Validator Agent may NOT:
 | Source | Input |
 |---|---|
 | All agents | Status updates, conflict reports, process questions |
-| Builder | Pre-Handoff Checklists (to verify completeness before Product review) |
+| Coder | Pre-Handoff Checklists (to verify completeness before Product review) |
 | Product | Milestone definitions (to populate Milestone Progress table) |
 | Retrospectives | Observations that generate process improvement actions |
 
@@ -80,7 +80,7 @@ The Validator Agent may NOT:
 
 ## Interaction Rules
 
-- Validator reviews Builder's Pre-Handoff Checklist for completeness before it reaches Product.
+- Validator reviews Coder's Pre-Handoff Checklist for completeness before it reaches Product.
 - Validator does not block work unless a process violation is actively occurring.
 - Validator issues a single written resolution for every conflict — not ongoing negotiations.
 - Validator tracks all unresolved conflicts in the Conflicts table below.
@@ -93,11 +93,11 @@ _Run at the beginning of every working session._
 
 - [ ] Review the Agent Status Dashboard — confirm no agents are in a blocked state.
 - [ ] Confirm the current milestone is clearly defined in Product's file.
-- [ ] Confirm Builder's Work Queue has at least one task that is "Ready to Start".
+- [ ] Confirm Coder's Work Queue has at least one task that is "Ready to Start".
 - [ ] Confirm no unresolved conflicts are more than [MAX_AGE, e.g., 2 sessions] old.
 - [ ] Review the Process Violations log — confirm all violations have a resolution or owner.
-- [ ] Confirm Architecture has an Approved document for every module Builder will touch this session.
-- [ ] Confirm UI has an Approved spec for every screen Builder will touch this session.
+- [ ] Confirm Architecture has an Approved document for every module Coder will touch this session.
+- [ ] Confirm UI has an Approved spec for every screen Coder will touch this session.
 
 ---
 
@@ -129,17 +129,17 @@ _Run this checklist when a task is submitted for Product review._
 ## Process Check: [TASK_NAME]
 **Date**: [DATE]
 
-- [ ] Task had a written definition with acceptance criteria before Builder started
-- [ ] Architecture document was Approved before Builder started (if applicable)
-- [ ] UI spec was Approved before Builder started (if applicable)
-- [ ] Builder completed every section of the Pre-Handoff Checklist
+- [ ] Task had a written definition with acceptance criteria before Coder started
+- [ ] Architecture document was Approved before Coder started (if applicable)
+- [ ] UI spec was Approved before Coder started (if applicable)
+- [ ] Coder completed every section of the Pre-Handoff Checklist
 - [ ] No items in the Pre-Handoff Checklist are blank without a stated reason
-- [ ] Builder did not introduce a new dependency without Architecture approval
-- [ ] Builder did not deviate from spec without raising an Open Question first
+- [ ] Coder did not introduce a new dependency without Architecture approval
+- [ ] Coder did not deviate from spec without raising an Open Question first
 
 **Verdict**:
 - [ ] CLEAR — Task may proceed to Product review.
-- [ ] VIOLATION — See notes. Task is returned to Builder before Product review.
+- [ ] VIOLATION — See notes. Task is returned to Coder before Product review.
 
 **Notes**:
 ```
@@ -169,7 +169,7 @@ _Run this checklist when a task is submitted for Product review._
 | Product | _(empty)_ | | | |
 | Architecture | _(empty)_ | | | |
 | UI | _(empty)_ | | | |
-| Builder | _(empty)_ | | | |
+| Coder | _(empty)_ | | | |
 | Bug Gatherer | _(empty)_ | | | |
 
 ---
