@@ -1,3 +1,15 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the Release Agent — the agent responsible for release preparation,
+changelogs, versioning, and build verification.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. The Release Checklist Template is copied for each release — update the pre-release checks
+   to match your project's quality gates and build process.
+4. Update the Inputs table if your project has additional release prerequisites.
+-->
+
 # [PROJECT_NAME] — Release Agent
 
 **Model**: [AI_MODEL]

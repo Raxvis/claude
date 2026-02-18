@@ -1,3 +1,16 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the Docs Writer Agent — the agent responsible for producing and
+maintaining all developer-facing documentation. It runs after any other agent completes work
+and accepts direct user input for documentation updates.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. Update the Inputs table to reflect which agents are active in your project.
+4. The Docs Writer references docs/FILE_CONVENTIONS.md and docs/README.md for placement rules —
+   ensure those files exist in your project.
+-->
+
 # [PROJECT_NAME] — Docs Writer Agent
 
 **Model**: [AI_MODEL]
@@ -13,7 +26,7 @@ The Docs Writer Agent produces and maintains all developer-facing documentation 
 ## Goals
 
 - Keep all documentation accurate and up-to-date after every agent action.
-- Update relevant docs whenever Coder, Architect, Reviewer, Tester, Refactor, or any other agent completes work.
+- Update relevant docs whenever Coder, Architecture, Reviewer, Tester, Refactor, or any other agent completes work.
 - When invoked by the user, update documentation with the provided input.
 - Maintain consistency across all documents in the `docs/` directory.
 - Write clear, concise documentation that serves both human contributors and AI agents.

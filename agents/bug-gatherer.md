@@ -263,8 +263,24 @@ _Every completed bug report must use this format. This is the initial report —
 
 ---
 
+## Current Work
+
+| Bug Report | Source | Date Filed | Suggested Severity | Status | Notes |
+|---|---|---|---|---|---|
+| _(empty)_ | | | | | |
+
+---
+
 ## Decisions Log
 
-| Date | Decision | Rationale |
+| Date | Decision | Rationale | Impact |
+|---|---|---|---|
+| _(empty)_ | | | |
+
+---
+
+## Future Work
+
+| Item | Priority | Notes |
 |---|---|---|
 | _(empty)_ | | |

@@ -1,3 +1,17 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the Debugger Agent — the agent responsible for isolating, explaining,
+and documenting defects. It investigates bugs, logs them to docs/BUGS.md, and provides alternative
+solutions for Coder or Refactor to implement.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. The Bug Lifecycle section defines the investigation workflow — update status names if your
+   project uses a different bug tracking convention.
+4. The Investigation Fields are appended to Bug Gatherer's initial report — keep them aligned
+   with the Bug Report Template in bug-gatherer.md.
+-->
+
 # [PROJECT_NAME] — Debugger Agent
 
 **Model**: [AI_MODEL]

@@ -1,3 +1,15 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the Asset Gen Agent — the agent responsible for specifying and
+producing visual assets. It coordinates with UI for design consistency and Coder for integration.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. Update the Asset Inventory table with your actual asset categories, formats, and size
+   requirements.
+4. Define naming conventions for assets in the Decisions Log as they are established.
+-->
+
 # [PROJECT_NAME] — Asset Gen Agent
 
 **Model**: [AI_MODEL]

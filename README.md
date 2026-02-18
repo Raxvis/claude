@@ -142,7 +142,7 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 
 ## File Listing
 
-All 28 files in the template system are listed below with a short description of each file's purpose.
+All files in the template system are listed below with a short description of each file's purpose.
 
 ### root/ (8 files)
 
@@ -178,15 +178,28 @@ All 28 files in the template system are listed below with a short description of
 | `agents/validator.md` | Defines the validator agent; enforces agent protocols, resolves conflicts, tracks milestones, runs retrospectives |
 | `agents/bug-gatherer.md` | Defines the bug gatherer agent; collects and structures bug reports for Product triage and Coder resolution |
 
-### docs/ (8 files)
+### docs/ (21 files)
 
 | File | Description |
 |---|---|
+| `docs/README.md` | Documentation index; master navigation entry point for all project documentation |
 | `docs/PRD.md` | Product Requirements Document; describes goals, user stories, and acceptance criteria for the current scope |
-| `docs/ARCHITECTURE.md` | Architecture decision record; documents structural choices, data flow, and module boundaries |
-| `docs/GAME.md` | Domain rules and mechanics reference; describes the core logic and progression system in plain language |
+| `docs/CONCEPT.md` | High-level project vision, core loop, and design pillars |
 | `docs/ADDITIONAL.md` | Supplementary context that does not fit the primary documents; captures edge cases and open questions |
+| `docs/GLOSSARY.md` | Canonical definitions for all domain-specific terms used across documents |
+| `docs/DESIGN_RATIONALE.md` | Decision log recording significant design choices and their trade-offs |
+| `docs/CODE_PATTERNS.md` | Coding conventions, naming rules, module structure, and state management patterns |
 | `docs/FILE_CONVENTIONS.md` | File naming rules, directory layout expectations, and module organisation guidelines |
-| `docs/API_CONTRACT.md` | Specifies the interfaces between major modules or external services; includes request/response shapes |
-| `docs/QUALITY_STANDARDS.md` | Defines measurable quality targets: coverage thresholds, performance budgets, accessibility requirements |
+| `docs/ERROR_HANDLING.md` | Guidelines for handling errors across all categories; defines principles, patterns, and user-facing message standards |
+| `docs/TEST_FRAMEWORK.md` | Testing strategy, test runner setup, file conventions, and coverage requirements |
+| `docs/BUGS.md` | Active bug tracker; documents known issues, reproduction steps, and resolution status |
 | `docs/CHANGELOG.md` | Running log of notable changes per release version, maintained by the release agent |
+| `docs/ASSETS.md` | Registry of all project assets (images, fonts, etc.) with status and source information |
+| `docs/MVP_LAUNCH.md` | Checklist and criteria for the initial public release |
+| `docs/STANDUP.md` | Running log of progress updates, blockers, and decisions from work sessions |
+| `docs/MILESTONE_VALIDATION.md` | Acceptance records confirming each milestone has met its stated criteria |
+| `docs/MILESTONE_TASKS.md` | Template for breaking a milestone into concrete, actionable tasks with acceptance criteria |
+| `docs/ARCH_MODULE.md` | Template for documenting a single code module (purpose, interface, dependencies, error handling) |
+| `docs/ARCH_SYSTEM.md` | Template for documenting a high-level system composed of multiple modules |
+| `docs/ARCH_DATA_SCHEMA.md` | Template for documenting a data schema or save format |
+| `docs/UI_SPEC.md` | Template for specifying a UI screen or component (layout, states, interactions, accessibility) |

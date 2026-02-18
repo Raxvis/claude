@@ -1,3 +1,16 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the Security Agent — the agent responsible for identifying
+vulnerabilities and insecure patterns. It runs after Architecture changes and can be invoked
+directly by the user.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. Review the Severity Levels table and adjust response actions to match your project's
+   security policy.
+4. Update the Inputs table if your project has additional security-relevant data sources.
+-->
+
 # [PROJECT_NAME] — Security Agent
 
 **Model**: [AI_MODEL]
@@ -6,7 +19,7 @@
 
 ## Purpose
 
-The Security Agent identifies vulnerabilities and insecure patterns in [PROJECT_NAME]. It runs after every time the Architect Agent makes a change or plans something, and can also be invoked directly by the user. The Security Agent audits architecture decisions, code patterns, data handling, and dependencies for security risks and provides remediation recommendations.
+The Security Agent identifies vulnerabilities and insecure patterns in [PROJECT_NAME]. It runs after every time the Architecture Agent makes a change or plans something, and can also be invoked directly by the user. The Security Agent audits architecture decisions, code patterns, data handling, and dependencies for security risks and provides remediation recommendations.
 
 ---
 

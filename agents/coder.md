@@ -327,3 +327,19 @@ _Track all new files created by Coder. This supports Architecture review and doc
 | File | Milestone | Module | Notes |
 |---|---|---|---|
 | _(empty)_ | | | |
+
+---
+
+## Decisions Log
+
+| Date | Decision | Rationale | Impact |
+|---|---|---|---|
+| _(empty)_ | | | |
+
+---
+
+## Future Work
+
+| Item | Priority | Notes |
+|---|---|---|
+| _(empty)_ | | |

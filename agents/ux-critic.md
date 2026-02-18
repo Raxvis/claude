@@ -1,3 +1,16 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the UX Critic Agent — the agent responsible for evaluating user
+experience flows against usability heuristics and filing issues with Bug Gatherer.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. The Usability Heuristics table uses Nielsen's 10 heuristics as a starting point — add or
+   modify heuristics to match your project's UX standards.
+4. All issues found by UX Critic are filed with Bug Gatherer — ensure bug-gatherer.md is
+   configured for your project.
+-->
+
 # [PROJECT_NAME] — UX Critic Agent
 
 **Model**: [AI_MODEL]

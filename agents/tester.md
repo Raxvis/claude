@@ -1,3 +1,14 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the Tester Agent — the agent responsible for generating, maintaining,
+and executing automated tests after every Coder change.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. Replace [COVERAGE_TARGET] and [BRANCH_TARGET] with your actual coverage thresholds.
+4. Update the Test Types table to match the test categories relevant to your project.
+-->
+
 # [PROJECT_NAME] — Tester Agent
 
 **Model**: [AI_MODEL]

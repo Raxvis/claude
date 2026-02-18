@@ -1,3 +1,15 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the Reviewer Agent — the agent responsible for reviewing all code
+produced by the Coder Agent against quality standards, architecture documents, and UI specifications.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. The Review Checklist is applied to every Coder submission — update items to match your
+   project's specific quality standards.
+4. Update the Interaction Rules to reflect your team's review workflow.
+-->
+
 # [PROJECT_NAME] — Reviewer Agent
 
 **Model**: [AI_MODEL]

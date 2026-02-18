@@ -405,3 +405,11 @@ _Copy this block when reviewing a Coder implementation against a UI spec._
 - [ ] **APPROVED WITH NOTES** — Minor issues noted. Follow-up in next pass.
 - [ ] **CHANGES REQUIRED** — See Issues Found. Coder must revise before Product review.
 ```
+
+---
+
+## Future Work
+
+| Item | Priority | Notes |
+|---|---|---|
+| _(empty)_ | | |

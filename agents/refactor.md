@@ -1,3 +1,15 @@
+<!-- TEMPLATE INSTRUCTIONS
+PURPOSE: This file defines the Refactor Agent — the agent responsible for improving code structure
+without changing behaviour. It is triggered by Reviewer or Tester findings, or by the user directly.
+
+HOW TO CUSTOMIZE:
+1. Replace [PROJECT_NAME] with your project name.
+2. Replace [AI_MODEL] with the model your agents use.
+3. The Refactor Submission Checklist is the core quality gate — keep it intact and copy it
+   for each refactoring change.
+4. Update the Current Work table columns to match your project's tracking needs.
+-->
+
 # [PROJECT_NAME] — Refactor Agent
 
 **Model**: [AI_MODEL]
