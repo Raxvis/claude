@@ -1,3 +1,8 @@
+---
+name: tester
+description: "Testing agent. Use for generating, maintaining, and executing automated tests."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Tester Agent — the agent responsible for generating, maintaining,
 and executing automated tests after every Coder change.

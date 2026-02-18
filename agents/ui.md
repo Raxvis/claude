@@ -1,3 +1,8 @@
+---
+name: ui
+description: "UI design agent. Use for visual design, layout specs, style guides, and interaction patterns."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the UI Agent — the agent responsible for visual design, layout
 specifications, the style guide, interaction patterns, and accessibility.

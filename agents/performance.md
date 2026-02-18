@@ -1,3 +1,8 @@
+---
+name: performance
+description: "Performance agent. Use for profiling, identifying bottlenecks, and optimization."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Performance Agent — the agent responsible for profiling,
 identifying bottlenecks, and proposing optimisations. It runs after Architecture changes and

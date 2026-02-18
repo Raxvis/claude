@@ -1,3 +1,8 @@
+---
+name: docs-writer
+description: "Documentation agent. Use for creating and maintaining developer-facing documentation."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Docs Writer Agent — the agent responsible for producing and
 maintaining all developer-facing documentation. It runs after any other agent completes work

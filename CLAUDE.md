@@ -9,7 +9,7 @@ This is a **multi-agent AI-assisted development workflow template**. It contains
 ## Directory Structure
 
 - **`root/`** — Files copied to a target project's root (CLAUDE.md template, config templates)
-- **`agents/`** — 16 agent role definitions plus a master `README.md` (product, architect, UI, coder, reviewer, tester, debugger, refactor, docs-writer, ux-critic, security, performance, release, asset-gen, validator, bug-gatherer). Each file defines one agent's purpose, authority, inputs, outputs, and decision log
+- **`agents/`** — 16 agent role definitions plus a master `README.md` (product, architect, UI, coder, reviewer, tester, debugger, refactor, docs-writer, ux-critic, security, performance, release, asset-gen, validator, bug-gatherer). Each file includes YAML frontmatter for Claude Code subagent auto-discovery and defines one agent's purpose, authority, inputs, outputs, and decision log. Copied to `.claude/agents/` in the target project
 - **`docs/`** — Shared reference document templates (PRD, architecture, glossary, UI specs, milestone tracking, etc.)
 
 ## Placeholder Convention
@@ -33,5 +33,5 @@ When editing templates, preserve placeholder tokens — do not replace them with
 
 - All files are markdown — there are no build, lint, or test commands
 - Every template file begins with an HTML comment block (`<!-- TEMPLATE INSTRUCTIONS -->`) explaining how to customize it
-- Agent files are self-contained; removing one does not break others
+- Agent files include YAML frontmatter (`name`, `description`) for Claude Code subagent registration; they are self-contained and removing one does not break others
 - `root/CLAUDE.md` contains `@import` directives at the bottom referencing docs that should be loaded as context

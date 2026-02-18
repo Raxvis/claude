@@ -1,3 +1,8 @@
+---
+name: architect
+description: "System design agent. Use for architecture decisions, module design, data schemas, and technical planning."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Architecture Agent — the agent responsible for system design,
 module boundaries, data schemas, code review standards, and technical decision-making.

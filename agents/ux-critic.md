@@ -1,3 +1,8 @@
+---
+name: ux-critic
+description: "UX evaluation agent. Use for reviewing user experience flows and accessibility."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the UX Critic Agent — the agent responsible for evaluating user
 experience flows against usability heuristics and filing issues with Bug Gatherer.

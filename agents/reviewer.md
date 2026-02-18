@@ -1,3 +1,8 @@
+---
+name: reviewer
+description: "Code review agent. Use for reviewing code quality, standards compliance, and architecture adherence."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Reviewer Agent — the agent responsible for reviewing all code
 produced by the Coder Agent against quality standards, architecture documents, and UI specifications.

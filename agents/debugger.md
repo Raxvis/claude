@@ -1,3 +1,8 @@
+---
+name: debugger
+description: "Bug investigation agent. Use for isolating defects, root cause analysis, and diagnosing failures."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Debugger Agent — the agent responsible for isolating, explaining,
 and documenting defects. It investigates bugs, logs them to docs/BUGS.md, and provides alternative

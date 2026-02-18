@@ -1,3 +1,8 @@
+---
+name: product
+description: "Product requirements agent. Use for defining features, acceptance criteria, milestone planning, and validating completed work."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Product Agent — the agent responsible for requirements, acceptance
 criteria, milestone definitions, and final sign-off on completed work.

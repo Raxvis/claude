@@ -1,3 +1,8 @@
+---
+name: coder
+description: "Implementation agent. Use for writing features, fixes, and production code."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Coder Agent — the agent responsible for writing all production
 code and completing implementation tasks as directed by Product, Architecture, and UI.

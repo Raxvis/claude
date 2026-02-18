@@ -1,3 +1,8 @@
+---
+name: security
+description: "Security audit agent. Use for identifying vulnerabilities and insecure patterns."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Security Agent — the agent responsible for identifying
 vulnerabilities and insecure patterns. It runs after Architecture changes and can be invoked

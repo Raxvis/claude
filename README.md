@@ -33,7 +33,7 @@ The system is:
 claude/
   README.md              # This file — master index and usage guide
   root/                  # Files intended for the project root
-  agents/                # Agent role definition files
+  agents/                # Agent role definitions (copied to .claude/agents/)
   docs/                  # Shared reference documents for agents and developers
 ```
 
@@ -43,7 +43,7 @@ Files in this directory are copied directly to the root of the target project. T
 
 ### agents/
 
-Each file defines one agent role. An agent file specifies the agent's purpose, its inputs and outputs, the decisions it is authorised to make autonomously, and the decisions that require human approval. Files that do not apply to your project type can be deleted without affecting the others.
+Each file defines one agent role with YAML frontmatter for Claude Code auto-discovery. When copied to `.claude/agents/` in the target project, Claude Code automatically registers them as subagents that can be invoked by name or delegated to automatically based on task type. Files that do not apply to your project type can be deleted without affecting the others.
 
 ### docs/
 
@@ -194,15 +194,20 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 
 ## Quick Start
 
-1. **Copy the template directory** into the root of your new project repository:
+1. **Copy template files** into the target project:
 
    ```
-   cp -r claude/ /path/to/your-new-project/
+   cp root/CLAUDE.md /path/to/your-project/CLAUDE.md
+   mkdir -p /path/to/your-project/.claude/agents
+   cp agents/*.md /path/to/your-project/.claude/agents/
+   cp -r docs/ /path/to/your-project/docs/
    ```
+
+   Agent files in `.claude/agents/` are automatically discovered by Claude Code as subagents.
 
 2. **Search for every placeholder** across all files and replace each one with the appropriate project-specific value. Process the placeholder categories in order: Identity first, then Tech, then Commands, then Domain, then Platform, then Agents.
 
-3. **Delete optional agent files** that do not apply to your project. Each agent file is self-contained; removing one does not break the others. Refer to the file listing below to identify candidates for deletion.
+3. **Delete optional agent files** that do not apply to your project. Each agent file is self-contained; removing one does not break the others. Refer to the Minimum Viable Agent Set section or the file listing below to identify candidates for deletion.
 
 4. **Review the docs/** directory. Each document contains its own placeholder tokens. Fill them in with the same values used in the agent files to keep all references consistent.
 
@@ -224,28 +229,36 @@ Placeholder names are written in `UPPER_SNAKE_CASE` and are scoped to one of the
 
 ### Session Initialization
 
-`root/CLAUDE.md` is automatically loaded from the project root at every session start. It provides the baseline context (project identity, build commands, conventions) that all agents need. To work as a specific agent, load the relevant agent file as additional context.
+`CLAUDE.md` is automatically loaded from the project root at every session start. It provides the baseline context (project identity, build commands, conventions) that all agents need. Agent files in `.claude/agents/` are auto-discovered as subagents — no manual loading required.
 
-### Agent Loading Patterns by Task Type
+### Agent Invocation
 
-| Task | Agent file to load |
+With agent files in `.claude/agents/`, Claude Code can invoke them in three ways:
+
+1. **Automatic delegation** — Claude routes tasks to the matching subagent based on the `description` field in each agent's YAML frontmatter (e.g., asking "review this code" automatically delegates to the reviewer agent).
+2. **Explicit request** — Ask Claude directly: "Use the coder agent to implement this feature" or "Have the security agent audit this module."
+3. **Management** — Use the `/agents` command to view, create, and manage all available subagents.
+
+### Agent Reference by Task Type
+
+| Task | Agent |
 |---|---|
-| Define or update requirements | `agents/product.md` |
-| Design system architecture | `agents/architect.md` |
-| Design UI screens or components | `agents/ui.md` |
-| Implement features or fixes | `agents/coder.md` |
-| Review code quality | `agents/reviewer.md` |
-| Write or run tests | `agents/tester.md` |
-| Investigate a bug | `agents/debugger.md` |
-| File a bug report | `agents/bug-gatherer.md` |
-| Refactor code structure | `agents/refactor.md` |
-| Update documentation | `agents/docs-writer.md` |
-| Evaluate UX flows | `agents/ux-critic.md` |
-| Audit for security issues | `agents/security.md` |
-| Profile performance | `agents/performance.md` |
-| Prepare a release | `agents/release.md` |
-| Produce visual assets | `agents/asset-gen.md` |
-| Enforce process and resolve conflicts | `agents/validator.md` |
+| Define or update requirements | `product` |
+| Design system architecture | `architect` |
+| Design UI screens or components | `ui` |
+| Implement features or fixes | `coder` |
+| Review code quality | `reviewer` |
+| Write or run tests | `tester` |
+| Investigate a bug | `debugger` |
+| File a bug report | `bug-gatherer` |
+| Refactor code structure | `refactor` |
+| Update documentation | `docs-writer` |
+| Evaluate UX flows | `ux-critic` |
+| Audit for security issues | `security` |
+| Profile performance | `performance` |
+| Prepare a release | `release` |
+| Produce visual assets | `asset-gen` |
+| Enforce process and resolve conflicts | `validator` |
 
 ### Inter-Agent Handoff
 
@@ -291,7 +304,7 @@ All files in the template system are listed below with a short description of ea
 |---|---|
 | `root/CLAUDE.md` | Top-level context file read first by every agent; defines project identity, structure, conventions, and run commands |
 
-### agents/ (17 files)
+### agents/ → `.claude/agents/` (17 files)
 
 | File | Description |
 |---|---|

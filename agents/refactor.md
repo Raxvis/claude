@@ -1,3 +1,8 @@
+---
+name: refactor
+description: "Refactoring agent. Use for improving code structure without changing behavior."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Refactor Agent — the agent responsible for improving code structure
 without changing behaviour. It is triggered by Reviewer or Tester findings, or by the user directly.

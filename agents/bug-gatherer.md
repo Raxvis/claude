@@ -1,3 +1,8 @@
+---
+name: bug-gatherer
+description: "Bug reporting agent. Use for collecting, structuring, and submitting bug reports."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Bug Gatherer Agent — the agent responsible for collecting,
 structuring, and submitting bug reports from testers, stakeholders, or other sources.

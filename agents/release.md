@@ -1,3 +1,8 @@
+---
+name: release
+description: "Release preparation agent. Use for changelogs, versioning, and build verification."
+---
+
 <!-- TEMPLATE INSTRUCTIONS
 PURPOSE: This file defines the Release Agent — the agent responsible for release preparation,
 changelogs, versioning, and build verification.
