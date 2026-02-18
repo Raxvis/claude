@@ -64,34 +64,34 @@ Reference specific goals from PRD.md or CONCEPT.md where applicable.]
 
 ---
 
-## Economy Design
+## Product Design
 
-<!-- Add entries here as economy design decisions are made. -->
+<!-- Add entries here as product design decisions are made. -->
 <!-- Use the template above. Most recent entries go at the top of this section. -->
 
-*No entries yet. Add the first entry when an economy design decision is finalized.*
+*No entries yet. Add the first entry when a product design decision is finalized.*
 
 ---
 
-## Monetization Design
+## UI Design
 
-<!-- Add entries here as monetization decisions are made. -->
+<!-- Add entries here as UI design decisions are made. -->
 
 *No entries yet.*
 
 ---
 
-## Gameplay Design
+## Architecture Design
 
-<!-- Add entries here as core gameplay decisions are made. -->
+<!-- Add entries here as architecture design decisions are made. -->
 
 *No entries yet.*
 
 ---
 
-## Progression Design
+## Security Design
 
-<!-- Add entries here as progression and balancing decisions are made. -->
+<!-- Add entries here as security design decisions are made. -->
 
 *No entries yet.*
 
