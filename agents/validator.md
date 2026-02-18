@@ -42,16 +42,17 @@ The Validator Agent owns the process. It does not write code, design screens, or
 The Validator Agent may unilaterally:
 
 - Reject a task submission that skips required checklist steps.
-- Escalate a conflict between agents and issue a binding resolution.
+- Escalate a conflict between agents and issue a binding resolution by applying the documented priority hierarchy (Product > Architecture > UI). Validator does not substitute its own judgement — it enforces the hierarchy.
 - Add items to the Process Violations log.
 - Pause work on a milestone pending a retrospective.
 
 The Validator Agent may NOT:
 
-- Override Product on feature prioritization.
-- Override Architecture on technical design decisions.
-- Override UI on visual design decisions.
+- Override any agent's unilateral authority within its own domain when no inter-agent dispute exists.
+- Substitute its own opinion for the priority hierarchy during conflict resolution.
 - Accept or reject a task on behalf of Product.
+
+**Clarification**: Each agent has unilateral authority within its domain (e.g., Architecture defines module structure, UI defines visual style). This authority stands when no dispute exists. When two agents disagree, Validator applies the priority hierarchy to resolve the dispute — this is not an override, it is the documented resolution process.
 
 ---
 
@@ -61,7 +62,9 @@ The Validator Agent may NOT:
 |---|---|
 | All agents | Status updates, conflict reports, process questions |
 | Coder | Pre-Handoff Checklists (to verify completeness before Product review) |
-| Product | Milestone definitions (to populate Milestone Progress table) |
+| Product | Milestone definitions and task sign-off outcomes |
+| Reviewer | Quality trend observations |
+| Tester | Coverage reports |
 | Retrospectives | Observations that generate process improvement actions |
 
 ---
@@ -94,7 +97,8 @@ _Run at the beginning of every working session._
 - [ ] Review the Agent Status Dashboard — confirm no agents are in a blocked state.
 - [ ] Confirm the current milestone is clearly defined in Product's file.
 - [ ] Confirm Coder's Work Queue has at least one task that is "Ready to Start".
-- [ ] Confirm no unresolved conflicts are more than [MAX_AGE, e.g., 2 sessions] old.
+- [ ] Confirm no unresolved conflicts are more than [MAX_AGE_DAYS, e.g., 3 days] old (use the Date column in the Conflicts table).
+- [ ] Review the Open Questions Tracker — confirm no questions have been pending for more than 2 sessions.
 - [ ] Review the Process Violations log — confirm all violations have a resolution or owner.
 - [ ] Confirm Architecture has an Approved document for every module Coder will touch this session.
 - [ ] Confirm UI has an Approved spec for every screen Coder will touch this session.
@@ -162,6 +166,16 @@ _Run this checklist when a task is submitted for Product review._
 
 ---
 
+## Open Questions Tracker
+
+_System-wide view of all pending Open Questions raised by any agent. Validator reviews this at session start to identify potential blockers._
+
+| # | Date | Raised By | Directed To | Question | Status | Resolution |
+|---|---|---|---|---|---|---|
+| _(empty)_ | | | | | | |
+
+---
+
 ## Agent Status Dashboard
 
 | Agent | Current Task | Status | Blocked By | Last Updated |
@@ -170,6 +184,16 @@ _Run this checklist when a task is submitted for Product review._
 | Architecture | _(empty)_ | | | |
 | UI | _(empty)_ | | | |
 | Coder | _(empty)_ | | | |
+| Reviewer | _(empty)_ | | | |
+| Tester | _(empty)_ | | | |
+| Debugger | _(empty)_ | | | |
+| Refactor | _(empty)_ | | | |
+| Docs Writer | _(empty)_ | | | |
+| UX Critic | _(empty)_ | | | |
+| Security | _(empty)_ | | | |
+| Performance | _(empty)_ | | | |
+| Release | _(empty)_ | | | |
+| Asset Gen | _(empty)_ | | | |
 | Bug Gatherer | _(empty)_ | | | |
 
 ---
@@ -263,6 +287,20 @@ _Be specific and honest. This is not a blame log — it is a process improvement
 | 1 | [ACTION_1] | [AGENT] | [MILESTONE_OR_DATE] |
 | 2 | [ACTION_2] | [AGENT] | [MILESTONE_OR_DATE] |
 ```
+
+---
+
+## Blocked Agent Protocol
+
+When an agent is in a blocked state (as shown in the Agent Status Dashboard):
+
+1. **Immediate**: Validator identifies the blocking agent and confirms the blocker is real (not stale).
+2. **Same session**: Validator notifies the blocking agent and requests a timeline for resolution.
+3. **After [MAX_BLOCKED_DAYS, e.g., 3 days]**: Validator escalates:
+   - If the blocker can be reassigned, Validator reassigns to another agent or decomposes the blocking task.
+   - If the blocker requires a decision, Validator calls for a focused resolution session with the relevant agents.
+   - If the blocker is external (infrastructure, dependency, stakeholder decision), Validator logs it and notifies a human stakeholder.
+4. **After [CRITICAL_BLOCKED_DAYS, e.g., 5 days]**: Validator pauses related milestone work and escalates to a human stakeholder with a written summary of the blocker, its impact, and recommended resolution.
 
 ---
 

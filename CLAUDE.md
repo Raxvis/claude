@@ -9,7 +9,7 @@ This is a **multi-agent AI-assisted development workflow template**. It contains
 ## Directory Structure
 
 - **`root/`** — Files copied to a target project's root (CLAUDE.md template, config templates)
-- **`agents/`** — Agent role definitions (product, architecture, UI, coder, validator, bug-gatherer). Each file defines one agent's purpose, authority, inputs, outputs, and decision log
+- **`agents/`** — 16 agent role definitions (product, architect, UI, coder, reviewer, tester, debugger, refactor, docs-writer, ux-critic, security, performance, release, asset-gen, validator, bug-gatherer). Each file defines one agent's purpose, authority, inputs, outputs, and decision log
 - **`docs/`** — Shared reference document templates (PRD, architecture, glossary, UI specs, milestone tracking, etc.)
 
 ## Placeholder Convention
@@ -20,7 +20,7 @@ When editing templates, preserve placeholder tokens — do not replace them with
 
 ## Agent System Architecture
 
-Six agent roles form a hierarchy: **Product** (requirements) → **Architecture** + **UI** (design specs) → **Coder** (implementation) → **Product** (validation). **Validator** enforces process. **Bug Gatherer** feeds reports to Product. Conflict resolution priority: Product > Architecture > UI.
+16 agent roles form a pipeline: **Product** (requirements) → **Architecture** + **UI** (design specs) → **Security** + **Performance** (review arch) → **Coder** (implementation) → **Tester** + **Reviewer** (quality gates) → **Debugger** + **Refactor** (fix issues) → **UX Critic** (usability review) → **Product** (validation) → **Release** (versioning). **Docs Writer** updates docs after every agent. **Asset Gen** produces visual assets. **Validator** enforces process. **Bug Gatherer** collects reports. Conflict resolution priority: Product > Architecture > UI.
 
 ## Key Files
 

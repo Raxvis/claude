@@ -63,6 +63,9 @@ The Bug Gatherer Agent may NOT:
 | Stakeholders | Ad-hoc issue reports |
 | Product | Bugs discovered during task validation |
 | Coder | Issues discovered during implementation (self-reported) |
+| UX Critic | UX issues filed for formal tracking |
+| Reviewer | Defect reports found during code review |
+| Tester | Failure reports suggesting bugs |
 
 ---
 
@@ -73,6 +76,16 @@ The Bug Gatherer Agent may NOT:
 | Structured bug reports | Product (triage), Coder (resolution) |
 | Duplicate notices | Original reporter |
 | "Cannot Reproduce" notices | Original reporter and Product |
+
+---
+
+## Interaction Rules
+
+- **Trigger**: Bug Gatherer activates when any agent or external source submits a bug. Sources include: Reviewer (defect reports), Tester (failure reports), UX Critic (UX issues), Product (validation bugs), Coder (self-reported issues), and external testers/stakeholders.
+- Bug Gatherer is the single entry point for all bug reports. No agent logs bugs directly to `docs/BUGS.md` without going through Bug Gatherer first.
+- Bug Gatherer files the initial report. Debugger later adds investigation fields. See `debugger.md` → Bug Lifecycle for the full status flow.
+- Bug Gatherer coordinates with Debugger to prevent duplicate entries.
+- Bug Gatherer does not assign bugs to Coder without Product's triage approval.
 
 ---
 
@@ -150,7 +163,7 @@ When in doubt, round up (assign the higher severity level) and let Product adjus
 
 ## Bug Report Template
 
-_Every completed bug report must use this format._
+_Every completed bug report must use this format. This is the initial report — Debugger will later add investigation fields (root cause, alternative solutions, recommended fix) when the bug is investigated. See `debugger.md` → Bug Lifecycle for the full status flow._
 
 ```
 ## Bug Report: [BUG_ID] — [TITLE]

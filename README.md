@@ -157,22 +157,26 @@ All 28 files in the template system are listed below with a short description of
 | `root/package.json` | Dependency manifest and npm script definitions |
 | `root/.env.example` | Template for environment variable definitions; contains no real secrets |
 
-### agents/ (12 files)
+### agents/ (16 files)
 
 | File | Description |
 |---|---|
+| `agents/product.md` | Defines the product agent; owns requirements, acceptance criteria, milestone definitions, and final sign-off |
 | `agents/architect.md` | Defines the system design agent; responsible for proposing and documenting structural decisions |
+| `agents/ui.md` | Defines the UI agent; owns visual design, layout specifications, style guide, and interaction patterns |
 | `agents/coder.md` | Defines the implementation agent; responsible for writing feature code within established conventions |
-| `agents/reviewer.md` | Defines the code review agent; responsible for evaluating pull requests against quality standards |
-| `agents/tester.md` | Defines the testing agent; responsible for generating and maintaining automated test coverage |
-| `agents/debugger.md` | Defines the debugging agent; responsible for isolating and explaining defects |
-| `agents/refactor.md` | Defines the refactoring agent; responsible for improving code structure without changing behaviour |
-| `agents/docs-writer.md` | Defines the documentation agent; responsible for producing and maintaining developer-facing documentation |
-| `agents/ux-critic.md` | Defines the user experience review agent; responsible for evaluating flows against usability heuristics |
-| `agents/security.md` | Defines the security audit agent; responsible for identifying vulnerabilities and insecure patterns |
-| `agents/performance.md` | Defines the performance agent; responsible for profiling, identifying bottlenecks, and proposing optimisations |
+| `agents/reviewer.md` | Defines the code review agent; reviews everything the Coder produces against quality standards |
+| `agents/tester.md` | Defines the testing agent; runs after every Coder change to generate and maintain automated test coverage |
+| `agents/debugger.md` | Defines the debugging agent; investigates bugs, logs to docs/BUGS.md, explains defects and provides alternative solutions |
+| `agents/refactor.md` | Defines the refactoring agent; improves code structure without changing behaviour, triggered by Reviewer/Tester issues or user |
+| `agents/docs-writer.md` | Defines the documentation agent; updates docs after any agent completes work, accepts direct user input |
+| `agents/ux-critic.md` | Defines the UX review agent; evaluates flows after Product and Coder, files issues with Bug Gatherer |
+| `agents/security.md` | Defines the security audit agent; runs after Architecture changes or plans, identifies vulnerabilities |
+| `agents/performance.md` | Defines the performance agent; runs after Architecture changes, provides feedback to Architecture |
 | `agents/release.md` | Defines the release preparation agent; responsible for changelogs, versioning, and build verification |
 | `agents/asset-gen.md` | Defines the media asset generation agent; responsible for specifying and producing visual assets |
+| `agents/validator.md` | Defines the validator agent; enforces agent protocols, resolves conflicts, tracks milestones, runs retrospectives |
+| `agents/bug-gatherer.md` | Defines the bug gatherer agent; collects and structures bug reports for Product triage and Coder resolution |
 
 ### docs/ (8 files)
 

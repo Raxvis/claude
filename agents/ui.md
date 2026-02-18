@@ -74,6 +74,7 @@ The UI Agent may NOT:
 | Screen specifications | Coder (implementation), Product (scope alignment) |
 | UX Review results | Coder (fixes), Product (sign-off) |
 | UX observations from sessions | Product (backlog input) |
+| Style guide and spec changes | Docs Writer (for documentation updates) |
 
 ---
 

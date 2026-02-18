@@ -74,6 +74,7 @@ The Product Agent may NOT:
 | Triage decisions on bug reports | Coder (for fix prioritization) |
 | Backlog updates and priority changes | Coder, Validator |
 | Playtesting feedback translated to backlog items | All agents |
+| Milestone and feature changes | Docs Writer (for documentation updates) |
 
 ---
 

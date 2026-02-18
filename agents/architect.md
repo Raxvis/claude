@@ -70,6 +70,7 @@ The Architecture Agent may NOT:
 | System Architecture Documents | All agents |
 | Data Schema Documents | Coder (implementation), Product (validation) |
 | Code Review feedback | Coder |
+| Architecture decisions and document changes | Docs Writer (for documentation updates) |
 
 ---
 
@@ -503,15 +504,19 @@ _Copy this block when performing a code review on Coder's output._
 
 ## Performance Budgets
 
+Architecture defines performance targets. The Performance Agent owns live tracking against these targets in `performance.md` → Performance Budget Tracking.
+
 _Fill in with real metrics for your platform and workload._
 
-| Metric | Target | Current | Status | Notes |
-|---|---|---|---|---|
-| [STARTUP_METRIC] | [TARGET] | — | — | |
-| [TICK_METRIC] | [TARGET] | — | — | |
-| [RENDER_METRIC] | [TARGET] | — | — | |
-| [MEMORY_METRIC] | [TARGET] | — | — | |
-| [STORAGE_METRIC] | [TARGET] | — | — | |
+| Metric | Target | Notes |
+|---|---|---|
+| [STARTUP_METRIC] | [TARGET] | |
+| [TICK_METRIC] | [TARGET] | |
+| [RENDER_METRIC] | [TARGET] | |
+| [MEMORY_METRIC] | [TARGET] | |
+| [STORAGE_METRIC] | [TARGET] | |
+
+_For current values and status, see `performance.md` → Performance Budget Tracking._
 
 ---
 

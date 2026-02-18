@@ -58,6 +58,11 @@ The Coder Agent may NOT:
 | Product | Task definitions with acceptance criteria |
 | Architecture | Approved architecture documents and code review feedback |
 | UI | Approved screen specifications |
+| Security | Security findings and remediation recommendations |
+| Performance | Optimisation recommendations for implementation |
+| Asset Gen | Asset specifications and integration requirements |
+| Reviewer | Review verdicts and change requests |
+| Tester | Test results and failure reports |
 | Validator | Process guidance and escalation decisions |
 
 ---
@@ -69,6 +74,7 @@ The Coder Agent may NOT:
 | Completed tasks with Pre-Handoff Checklist | Product (for validation) |
 | Open Questions | Architecture or UI (for resolution) |
 | Implementation status updates | Validator (for dashboard) |
+| New modules and interface changes | Docs Writer (for documentation updates) |
 
 ---
 
@@ -136,6 +142,7 @@ _Copy this block for every task before submitting for Product review. Every item
 - [ ] New logic is structured to be testable (pure functions, no hidden dependencies)
 - [ ] Existing tests (if any) still pass
 - [ ] New tests added for: [LIST_KEY_BEHAVIORS_TESTED]
+- [ ] Test coverage meets or exceeds [COVERAGE_TARGET]% for new code
 
 ### Performance
 
@@ -280,6 +287,16 @@ _Directives are instructions from Architecture, UI, or Product that do not yet h
 | Directive | From | Date | Status | Notes |
 |---|---|---|---|---|
 | _(empty)_ | | | | |
+
+---
+
+## Open Questions
+
+_Track questions raised to Architecture, UI, or Product. Do not begin implementation of affected work until the question is resolved._
+
+| # | Date | Question | Directed To | Status | Resolution |
+|---|---|---|---|---|---|
+| _(empty)_ | | | | | |
 
 ---
 
